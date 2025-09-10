@@ -34861,7 +34861,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var OurSecondSection = function OurSecondSection() {
-  // images are either stored in companyValues or mobile directory
+  // images are either located in companyValues or mobile directory.
+  // two grid layout with some items that are only viewable on desktop or mobile.
+
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
       className: "min-h-screen",

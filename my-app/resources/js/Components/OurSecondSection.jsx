@@ -2,11 +2,12 @@ import React from 'react';
 
 const OurSecondSection = () => {
 
-  // images are either stored in companyValues or mobile directory
+  // images are either located in companyValues or mobile directory.
+  // two grid layout with some items that are only viewable on desktop or mobile.
+
   return (
     <div>
       <div className="min-h-screen">
-        { /* 2 column grid layout */}
         <div className="w-full grid grid-cols-1 sm:grid-cols-[1fr_2fr] gap-8 pb-8 pt-20">
           <div>
             <div className="w-full bg-[#F5F5F5]">
