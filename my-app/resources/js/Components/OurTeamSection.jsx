@@ -105,7 +105,7 @@ const OurTeamSection  = () => {
                 {[...Array(totalSlides)].map((_, slideIndex) => (
                 <div key={slideIndex} className="w-full flex-shrink-0">
                      {/* 5 cols in each slide, 4 spacing */}
-                    <div className="grid grid-cols-5 gap-4">
+                    <div className="grid grid-cols-2 md:grid-cols-5 gap-2 md:gap-4">
                     {teamMembers.map((member) => renderTeamMember({
                         ...member,
                         id: `${slideIndex}-${member.id}` // make sure we have a unique id for each item

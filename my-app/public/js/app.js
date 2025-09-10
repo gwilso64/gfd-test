@@ -35102,7 +35102,7 @@ var OurTeamSection = function OurTeamSection() {
           return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
             className: "w-full flex-shrink-0",
             children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-              className: "grid grid-cols-5 gap-4",
+              className: "grid grid-cols-2 md:grid-cols-5 gap-2 md:gap-4",
               children: teamMembers.map(function (member) {
                 return renderTeamMember(_objectSpread(_objectSpread({}, member), {}, {
                   id: "".concat(slideIndex, "-").concat(member.id) // make sure we have a unique id for each item
