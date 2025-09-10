@@ -34906,9 +34906,88 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+function _slicedToArray(r, e) { return _arrayWithHoles(r) || _iterableToArrayLimit(r, e) || _unsupportedIterableToArray(r, e) || _nonIterableRest(); }
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) return _arrayLikeToArray(r, a); var t = {}.toString.call(r).slice(8, -1); return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray(r, a) : void 0; } }
+function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }
+function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (null != t) { var e, n, i, u, a = [], f = !0, o = !1; try { if (i = (t = t.call(r)).next, 0 === l) { if (Object(t) !== t) return; f = !1; } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0); } catch (r) { o = !0, n = r; } finally { try { if (!f && null != t["return"] && (u = t["return"](), Object(u) !== u)) return; } finally { if (o) throw n; } } return a; } }
+function _arrayWithHoles(r) { if (Array.isArray(r)) return r; }
 
 
 var OurTeamSection = function OurTeamSection() {
+  var _useState = useState(0),
+    _useState2 = _slicedToArray(_useState, 2),
+    currentSlide = _useState2[0],
+    setCurrentSlide = _useState2[1];
+
+  // Team member data - This could come from a get call
+  var teamMembers = [{
+    id: 1,
+    image: '/images/team-member-1.png',
+    name: 'Team Member 1',
+    hover: '/images/team-member-1-hover-state.png'
+  }, {
+    id: 2,
+    image: '/images/team-g.png',
+    name: 'Team Member G'
+  }, {
+    id: 3,
+    image: '/images/team-member-2.png',
+    name: 'Team Member 2'
+  }, {
+    id: 4,
+    image: '/images/team-member-1.png',
+    name: 'Team Member 1',
+    hover: '/images/team-member-1-hover-state.png'
+  }, {
+    id: 5,
+    image: '/images/team-member-2.png',
+    name: 'Team Member 2'
+  }, {
+    id: 6,
+    image: '/images/team-member-1.png',
+    name: 'Team Member 1',
+    hover: '/images/team-member-1-hover-state.png'
+  }, {
+    id: 7,
+    image: '/images/team-member-2.png',
+    name: 'Team Member 2'
+  }, {
+    id: 8,
+    image: '/images/team-f.png',
+    name: 'Team Member F'
+  }, {
+    id: 9,
+    image: '/images/team-member-1.png',
+    name: 'Team Member 1',
+    hover: '/images/team-member-1-hover-state.png'
+  }, {
+    id: 10,
+    image: '/images/team-member-2.png',
+    name: 'Team Member 2'
+  }, {
+    id: 11,
+    image: '/images/team-member-1.png',
+    name: 'Team Member 1',
+    hover: '/images/team-member-1-hover-state.png'
+  }, {
+    id: 12,
+    image: '/images/team-member-2.png',
+    name: 'Team Member 2'
+  }, {
+    id: 13,
+    image: '/images/team-member-1.png',
+    name: 'Team Member 1',
+    hover: '/images/team-member-1-hover-state.png'
+  }, {
+    id: 14,
+    image: '/images/team-d.png',
+    name: 'Team Member D'
+  }, {
+    id: 15,
+    image: '/images/team-member-2.png',
+    name: 'Team Member 2'
+  }];
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h1", {
     children: "Our Team"
   });
