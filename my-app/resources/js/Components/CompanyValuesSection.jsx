@@ -1,6 +1,6 @@
 import React from 'react';
 
-const OurSecondSection = () => {
+const CompanyValuesSection = () => {
 
   // images are either located in companyValues or mobile directory.
   // two grid layout with some items that are only viewable on desktop or mobile.
@@ -42,4 +42,4 @@ const OurSecondSection = () => {
   );
 };
 
-export default OurSecondSection;
+export default CompanyValuesSection;

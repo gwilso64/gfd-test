@@ -34811,7 +34811,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_dom_client__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom/client */ "./node_modules/react-dom/client.js");
 /* harmony import */ var _components_OurStorySection__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/OurStorySection */ "./resources/js/components/OurStorySection.jsx");
-/* harmony import */ var _components_OurSecondSection__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/OurSecondSection */ "./resources/js/components/OurSecondSection.jsx");
+/* harmony import */ var _components_CompanyValuesSection__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/CompanyValuesSection */ "./resources/js/components/CompanyValuesSection.jsx");
 /* harmony import */ var _components_OurTeamSection__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/OurTeamSection */ "./resources/js/components/OurTeamSection.jsx");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 // App.jsx
@@ -34827,7 +34827,7 @@ function App() {
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.Fragment, {
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_components_OurStorySection__WEBPACK_IMPORTED_MODULE_2__["default"], {})
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.Fragment, {
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_components_OurSecondSection__WEBPACK_IMPORTED_MODULE_3__["default"], {})
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_components_CompanyValuesSection__WEBPACK_IMPORTED_MODULE_3__["default"], {})
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.Fragment, {
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_components_OurTeamSection__WEBPACK_IMPORTED_MODULE_4__["default"], {})
     })]
@@ -34845,10 +34845,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
 /***/ }),
 
-/***/ "./resources/js/components/OurSecondSection.jsx":
-/*!******************************************************!*\
-  !*** ./resources/js/components/OurSecondSection.jsx ***!
-  \******************************************************/
+/***/ "./resources/js/components/CompanyValuesSection.jsx":
+/*!**********************************************************!*\
+  !*** ./resources/js/components/CompanyValuesSection.jsx ***!
+  \**********************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -34860,7 +34860,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 
 
-var OurSecondSection = function OurSecondSection() {
+var CompanyValuesSection = function CompanyValuesSection() {
   // images are either located in companyValues or mobile directory.
   // two grid layout with some items that are only viewable on desktop or mobile.
 
@@ -34922,7 +34922,7 @@ var OurSecondSection = function OurSecondSection() {
     })
   });
 };
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (OurSecondSection);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (CompanyValuesSection);
 
 /***/ }),
 

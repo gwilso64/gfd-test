@@ -3,7 +3,7 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 import OurStorySection from './components/OurStorySection';
-import OurSecondSection from './components/OurSecondSection';
+import CompanyValuesSection from './components/CompanyValuesSection';
 import OurTeamSection from './components/OurTeamSection';
 
 
@@ -14,7 +14,7 @@ function App() {
     <OurStorySection />
   </>
   <>
-    <OurSecondSection />
+    <CompanyValuesSection />
   </>
   <>
     <OurTeamSection />
