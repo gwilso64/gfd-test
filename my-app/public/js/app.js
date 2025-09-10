@@ -34929,112 +34929,161 @@ var OurTeamSection = function OurTeamSection() {
     _useState2 = _slicedToArray(_useState, 2),
     currentSlide = _useState2[0],
     setCurrentSlide = _useState2[1];
+  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false),
+    _useState4 = _slicedToArray(_useState3, 2),
+    isPopupOpen = _useState4[0],
+    setIsPopupOpen = _useState4[1];
+  var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(null),
+    _useState6 = _slicedToArray(_useState5, 2),
+    selectedMember = _useState6[0],
+    setSelectedMember = _useState6[1];
 
   // Team member data - This could come from a get call
   // we can use the IDs as keys. Good for React to identify items have changed, added, or removed
+
+  // clickable is this a clickable item or a letter
+  // selected image for selected user, I have added a placeholder for team members that do not have a photo (https://placehold.co/200x250)
+  // hover is for hover state image
   var teamMembers = [{
     id: 1,
+    clickable: true,
     image: '/images/team/team-member-1.png',
     name: 'Team Member 1',
+    selected: '/images/team/selected/team-member-1s.png',
     hover: '/images/team/hover/team-member-1h.png',
     title: 'Job Title',
-    description: 'Our aim is to offer the industry’s best quality products at a competitive price, direct to homeowners. More and more customers are now looking for the most cost-effective way to get the same quality products at a fraction of the high street price, and we are happy to advise and liaise with your builders, fitters or project managers throughout your order. For customers who want the full survey and installation service, we truly believe we offer the best package in the business. Our nationwide installation service is unrivalled by any other online company - click here to read more.'
+    description: "Our aim is to offer the industry's best quality products at a competitive price, direct to homeowners. More and more customers are now looking for the most cost-effective way to get the same quality products at a fraction of the high street price, and we are happy to advise and liaise with your builders, fitters or project managers throughout your order. For customers who want the full survey and installation service, we truly believe we offer the best package in the business. Our nationwide installation service is unrivalled by any other online company - click here to read more."
   }, {
     id: 2,
+    clickable: false,
     image: '/images/team/team-g.png',
     name: 'Team Member G',
     title: 'Job Title',
-    description: 'Our aim is to offer the industry’s best quality products at a competitive price, direct to homeowners. More and more customers are now looking for the most cost-effective way to get the same quality products at a fraction of the high street price, and we are happy to advise and liaise with your builders, fitters or project managers throughout your order. For customers who want the full survey and installation service, we truly believe we offer the best package in the business. Our nationwide installation service is unrivalled by any other online company - click here to read more.'
+    description: "Our aim is to offer the industry's best quality products at a competitive price, direct to homeowners. More and more customers are now looking for the most cost-effective way to get the same quality products at a fraction of the high street price, and we are happy to advise and liaise with your builders, fitters or project managers throughout your order. For customers who want the full survey and installation service, we truly believe we offer the best package in the business. Our nationwide installation service is unrivalled by any other online company - click here to read more."
   }, {
     id: 3,
+    clickable: true,
     image: '/images/team/team-member-2.png',
     name: 'Team Member 2',
+    selected: 'https://placehold.co/200x250',
     title: 'Job Title',
-    description: 'Our aim is to offer the industry’s best quality products at a competitive price, direct to homeowners. More and more customers are now looking for the most cost-effective way to get the same quality products at a fraction of the high street price, and we are happy to advise and liaise with your builders, fitters or project managers throughout your order. For customers who want the full survey and installation service, we truly believe we offer the best package in the business. Our nationwide installation service is unrivalled by any other online company - click here to read more.'
+    description: "Our aim is to offer the industry's best quality products at a competitive price, direct to homeowners. More and more customers are now looking for the most cost-effective way to get the same quality products at a fraction of the high street price, and we are happy to advise and liaise with your builders, fitters or project managers throughout your order. For customers who want the full survey and installation service, we truly believe we offer the best package in the business. Our nationwide installation service is unrivalled by any other online company - click here to read more."
   }, {
     id: 4,
+    clickable: true,
     image: '/images/team/team-member-1.png',
     name: 'Team Member 1',
+    selected: '/images/team/selected/team-member-1s.png',
     hover: '/images/team/hover/team-member-1h.png',
     title: 'Job Title',
-    description: 'Our aim is to offer the industry’s best quality products at a competitive price, direct to homeowners. More and more customers are now looking for the most cost-effective way to get the same quality products at a fraction of the high street price, and we are happy to advise and liaise with your builders, fitters or project managers throughout your order. For customers who want the full survey and installation service, we truly believe we offer the best package in the business. Our nationwide installation service is unrivalled by any other online company - click here to read more.'
+    description: "Our aim is to offer the industry's best quality products at a competitive price, direct to homeowners. More and more customers are now looking for the most cost-effective way to get the same quality products at a fraction of the high street price, and we are happy to advise and liaise with your builders, fitters or project managers throughout your order. For customers who want the full survey and installation service, we truly believe we offer the best package in the business. Our nationwide installation service is unrivalled by any other online company - click here to read more."
   }, {
     id: 5,
+    clickable: true,
     image: '/images/team/team-member-2.png',
     name: 'Team Member 2',
+    selected: 'https://placehold.co/200x250',
     title: 'Job Title',
-    description: 'Our aim is to offer the industry’s best quality products at a competitive price, direct to homeowners. More and more customers are now looking for the most cost-effective way to get the same quality products at a fraction of the high street price, and we are happy to advise and liaise with your builders, fitters or project managers throughout your order. For customers who want the full survey and installation service, we truly believe we offer the best package in the business. Our nationwide installation service is unrivalled by any other online company - click here to read more.'
+    description: "Our aim is to offer the industry's best quality products at a competitive price, direct to homeowners. More and more customers are now looking for the most cost-effective way to get the same quality products at a fraction of the high street price, and we are happy to advise and liaise with your builders, fitters or project managers throughout your order. For customers who want the full survey and installation service, we truly believe we offer the best package in the business. Our nationwide installation service is unrivalled by any other online company - click here to read more."
   }, {
     id: 6,
+    clickable: true,
     image: '/images/team/team-member-1.png',
     name: 'Team Member 1',
+    selected: '/images/team/selected/team-member-1s.png',
     hover: '/images/team/hover/team-member-1h.png',
     title: 'Job Title',
-    description: 'Our aim is to offer the industry’s best quality products at a competitive price, direct to homeowners. More and more customers are now looking for the most cost-effective way to get the same quality products at a fraction of the high street price, and we are happy to advise and liaise with your builders, fitters or project managers throughout your order. For customers who want the full survey and installation service, we truly believe we offer the best package in the business. Our nationwide installation service is unrivalled by any other online company - click here to read more.'
+    description: "Our aim is to offer the industry's best quality products at a competitive price, direct to homeowners. More and more customers are now looking for the most cost-effective way to get the same quality products at a fraction of the high street price, and we are happy to advise and liaise with your builders, fitters or project managers throughout your order. For customers who want the full survey and installation service, we truly believe we offer the best package in the business. Our nationwide installation service is unrivalled by any other online company - click here to read more."
   }, {
     id: 7,
+    clickable: true,
     image: '/images/team/team-member-2.png',
     name: 'Team Member 2',
+    selected: 'https://placehold.co/200x250',
     title: 'Job Title',
-    description: 'Our aim is to offer the industry’s best quality products at a competitive price, direct to homeowners. More and more customers are now looking for the most cost-effective way to get the same quality products at a fraction of the high street price, and we are happy to advise and liaise with your builders, fitters or project managers throughout your order. For customers who want the full survey and installation service, we truly believe we offer the best package in the business. Our nationwide installation service is unrivalled by any other online company - click here to read more.'
+    description: "Our aim is to offer the industry's best quality products at a competitive price, direct to homeowners. More and more customers are now looking for the most cost-effective way to get the same quality products at a fraction of the high street price, and we are happy to advise and liaise with your builders, fitters or project managers throughout your order. For customers who want the full survey and installation service, we truly believe we offer the best package in the business. Our nationwide installation service is unrivalled by any other online company - click here to read more."
   }, {
     id: 8,
+    clickable: false,
     image: '/images/team/team-f.png',
     name: 'Team Member F',
     title: 'Job Title',
-    description: 'Our aim is to offer the industry’s best quality products at a competitive price, direct to homeowners. More and more customers are now looking for the most cost-effective way to get the same quality products at a fraction of the high street price, and we are happy to advise and liaise with your builders, fitters or project managers throughout your order. For customers who want the full survey and installation service, we truly believe we offer the best package in the business. Our nationwide installation service is unrivalled by any other online company - click here to read more.'
+    description: "Our aim is to offer the industry's best quality products at a competitive price, direct to homeowners. More and more customers are now looking for the most cost-effective way to get the same quality products at a fraction of the high street price, and we are happy to advise and liaise with your builders, fitters or project managers throughout your order. For customers who want the full survey and installation service, we truly believe we offer the best package in the business. Our nationwide installation service is unrivalled by any other online company - click here to read more."
   }, {
     id: 9,
+    clickable: true,
     image: '/images/team/team-member-1.png',
     name: 'Team Member 1',
+    selected: '/images/team/selected/team-member-1s.png',
     hover: '/images/team/hover/team-member-1h.png',
     title: 'Job Title',
-    description: 'Our aim is to offer the industry’s best quality products at a competitive price, direct to homeowners. More and more customers are now looking for the most cost-effective way to get the same quality products at a fraction of the high street price, and we are happy to advise and liaise with your builders, fitters or project managers throughout your order. For customers who want the full survey and installation service, we truly believe we offer the best package in the business. Our nationwide installation service is unrivalled by any other online company - click here to read more.'
+    description: "Our aim is to offer the industry's best quality products at a competitive price, direct to homeowners. More and more customers are now looking for the most cost-effective way to get the same quality products at a fraction of the high street price, and we are happy to advise and liaise with your builders, fitters or project managers throughout your order. For customers who want the full survey and installation service, we truly believe we offer the best package in the business. Our nationwide installation service is unrivalled by any other online company - click here to read more."
   }, {
     id: 10,
+    clickable: true,
     image: '/images/team/team-member-2.png',
     name: 'Team Member 2',
+    selected: 'https://placehold.co/200x250',
     title: 'Job Title',
-    description: 'Our aim is to offer the industry’s best quality products at a competitive price, direct to homeowners. More and more customers are now looking for the most cost-effective way to get the same quality products at a fraction of the high street price, and we are happy to advise and liaise with your builders, fitters or project managers throughout your order. For customers who want the full survey and installation service, we truly believe we offer the best package in the business. Our nationwide installation service is unrivalled by any other online company - click here to read more.'
+    description: "Our aim is to offer the industry's best quality products at a competitive price, direct to homeowners. More and more customers are now looking for the most cost-effective way to get the same quality products at a fraction of the high street price, and we are happy to advise and liaise with your builders, fitters or project managers throughout your order. For customers who want the full survey and installation service, we truly believe we offer the best package in the business. Our nationwide installation service is unrivalled by any other online company - click here to read more."
   }, {
     id: 11,
+    clickable: true,
     image: '/images/team/team-member-1.png',
     name: 'Team Member 1',
+    selected: '/images/team/selected/team-member-1s.png',
     hover: '/images/team/hover/team-member-1h.png',
     title: 'Job Title',
-    description: 'Our aim is to offer the industry’s best quality products at a competitive price, direct to homeowners. More and more customers are now looking for the most cost-effective way to get the same quality products at a fraction of the high street price, and we are happy to advise and liaise with your builders, fitters or project managers throughout your order. For customers who want the full survey and installation service, we truly believe we offer the best package in the business. Our nationwide installation service is unrivalled by any other online company - click here to read more.'
+    description: "Our aim is to offer the industry's best quality products at a competitive price, direct to homeowners. More and more customers are now looking for the most cost-effective way to get the same quality products at a fraction of the high street price, and we are happy to advise and liaise with your builders, fitters or project managers throughout your order. For customers who want the full survey and installation service, we truly believe we offer the best package in the business. Our nationwide installation service is unrivalled by any other online company - click here to read more."
   }, {
     id: 12,
+    clickable: true,
     image: '/images/team/team-member-2.png',
     name: 'Team Member 2',
+    selected: 'https://placehold.co/200x250',
     title: 'Job Title',
-    description: 'Our aim is to offer the industry’s best quality products at a competitive price, direct to homeowners. More and more customers are now looking for the most cost-effective way to get the same quality products at a fraction of the high street price, and we are happy to advise and liaise with your builders, fitters or project managers throughout your order. For customers who want the full survey and installation service, we truly believe we offer the best package in the business. Our nationwide installation service is unrivalled by any other online company - click here to read more.'
+    description: "Our aim is to offer the industry's best quality products at a competitive price, direct to homeowners. More and more customers are now looking for the most cost-effective way to get the same quality products at a fraction of the high street price, and we are happy to advise and liaise with your builders, fitters or project managers throughout your order. For customers who want the full survey and installation service, we truly believe we offer the best package in the business. Our nationwide installation service is unrivalled by any other online company - click here to read more."
   }, {
     id: 13,
+    clickable: true,
     image: '/images/team/team-member-1.png',
     name: 'Team Member 1',
+    selected: '/images/team/selected/team-member-1s.png',
     hover: '/images/team/hover/team-member-1h.png',
     title: 'Job Title',
-    description: 'Our aim is to offer the industry’s best quality products at a competitive price, direct to homeowners. More and more customers are now looking for the most cost-effective way to get the same quality products at a fraction of the high street price, and we are happy to advise and liaise with your builders, fitters or project managers throughout your order. For customers who want the full survey and installation service, we truly believe we offer the best package in the business. Our nationwide installation service is unrivalled by any other online company - click here to read more.'
+    description: "Our aim is to offer the industry's best quality products at a competitive price, direct to homeowners. More and more customers are now looking for the most cost-effective way to get the same quality products at a fraction of the high street price, and we are happy to advise and liaise with your builders, fitters or project managers throughout your order. For customers who want the full survey and installation service, we truly believe we offer the best package in the business. Our nationwide installation service is unrivalled by any other online company - click here to read more."
   }, {
     id: 14,
+    clickable: false,
     image: '/images/team/team-d.png',
     name: 'Team Member D',
     title: 'Job Title',
-    description: 'Our aim is to offer the industry’s best quality products at a competitive price, direct to homeowners. More and more customers are now looking for the most cost-effective way to get the same quality products at a fraction of the high street price, and we are happy to advise and liaise with your builders, fitters or project managers throughout your order. For customers who want the full survey and installation service, we truly believe we offer the best package in the business. Our nationwide installation service is unrivalled by any other online company - click here to read more.'
+    description: "Our aim is to offer the industry's best quality products at a competitive price, direct to homeowners. More and more customers are now looking for the most cost-effective way to get the same quality products at a fraction of the high street price, and we are happy to advise and liaise with your builders, fitters or project managers throughout your order. For customers who want the full survey and installation service, we truly believe we offer the best package in the business. Our nationwide installation service is unrivalled by any other online company - click here to read more."
   }, {
     id: 15,
+    clickable: true,
     image: '/images/team/team-member-2.png',
     name: 'Team Member 2',
+    selected: 'https://placehold.co/200x250',
     title: 'Job Title',
-    description: 'Our aim is to offer the industry’s best quality products at a competitive price, direct to homeowners. More and more customers are now looking for the most cost-effective way to get the same quality products at a fraction of the high street price, and we are happy to advise and liaise with your builders, fitters or project managers throughout your order. For customers who want the full survey and installation service, we truly believe we offer the best package in the business. Our nationwide installation service is unrivalled by any other online company - click here to read more.'
+    description: "Our aim is to offer the industry's best quality products at a competitive price, direct to homeowners. More and more customers are now looking for the most cost-effective way to get the same quality products at a fraction of the high street price, and we are happy to advise and liaise with your builders, fitters or project managers throughout your order. For customers who want the full survey and installation service, we truly believe we offer the best package in the business. Our nationwide installation service is unrivalled by any other online company - click here to read more."
   }];
   var totalSlides = teamMembers.length / 5;
 
-  // For selecting our member (possible add a popup feature?)
+  // For selecting our team member that triggers popup
   var handleTeamMemberClick = function handleTeamMemberClick(member) {
-    console.log('Team member clicked:', member);
+    if (member.clickable === true) {
+      setSelectedMember(member);
+      setIsPopupOpen(true);
+    }
   };
+
+  // colose popup
+  var closePopup = function closePopup() {
+    setIsPopupOpen(false);
+    setSelectedMember(null);
+  };
+
   // next arrow button
   var nextSlide = function nextSlide() {
     setCurrentSlide(function (prev) {
@@ -35048,46 +35097,162 @@ var OurTeamSection = function OurTeamSection() {
       return (prev - 1 + totalSlides) % totalSlides;
     });
   };
+
+  // template for each team member to build the jsx
   var renderTeamMember = function renderTeamMember(member) {
-    var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false),
-      _useState4 = _slicedToArray(_useState3, 2),
-      isHovered = _useState4[0],
-      setIsHovered = _useState4[1];
-    var imageSrc = isHovered && member.hover ? member.hover : member.image;
     return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-      className: " rounded-lg overflow-hidden cursor-pointer hover:shadow-lg transition-shadow duration-200",
+      className: "overflow-hidden cursor-pointer hover:shadow-lg transition-shadow duration-200",
       onClick: function onClick() {
         return handleTeamMemberClick(member);
       },
-      onMouseEnter: function onMouseEnter() {
-        return setIsHovered(true);
-      },
-      onMouseLeave: function onMouseLeave() {
-        return setIsHovered(false);
-      },
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
-        src: imageSrc,
+        src: member.image,
         alt: member.name,
-        className: "w-full h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-300"
+        className: "w-full h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-300",
+        onMouseEnter: function onMouseEnter(e) {
+          if (member.hover) {
+            e.target.src = member.hover;
+          }
+        },
+        onMouseLeave: function onMouseLeave(e) {
+          e.target.src = member.image;
+        }
       })
     }, member.id);
   };
+
+  // Navigation functions for popup
+  var navigateTeamMember = function navigateTeamMember(direction) {
+    // Extract original ID if it contains slide prefix
+    var originalId = selectedMember.id.toString().includes('-') ? parseInt(selectedMember.id.toString().split('-').pop()) : selectedMember.id;
+    var currentIndex = teamMembers.findIndex(function (member) {
+      return member.id === originalId;
+    });
+
+    // just incase
+    if (currentIndex === -1) return;
+    var newIndex;
+    if (direction === 'next') {
+      newIndex = currentIndex < teamMembers.length - 1 ? currentIndex + 1 : 0;
+    } else {
+      newIndex = currentIndex > 0 ? currentIndex - 1 : teamMembers.length - 1;
+    }
+    setSelectedMember(teamMembers[newIndex]);
+  };
+  var TeamMemberPopup = function TeamMemberPopup() {
+    if (!isPopupOpen || !selectedMember) return null;
+    // Popup item with slider
+    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+      className: "fixed inset-0 bg-black flex items-center justify-center z-50 p-4",
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+        className: "bg-white max-w-[327px] w-full max-h-[90vh] overflow-y-auto",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+          className: "flex justify-between items-center text-black pr-6 pt-6 border-black border-b ml-6",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("h3", {
+            className: "text-xl",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("strong", {
+              children: "Meet"
+            }), ", ", selectedMember.name]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("button", {
+            onClick: closePopup,
+            className: "hover:text-gray-700 transition-colors",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("svg", {
+              className: "w-6 h-6  -top-2.5 -right-2.5 relative",
+              fill: "none",
+              stroke: "currentColor",
+              viewBox: "0 0 24 24",
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+                strokeLinecap: "round",
+                strokeLinejoin: "round",
+                strokeWidth: 2,
+                d: "M6 18L18 6M6 6l12 12"
+              })
+            })
+          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+          className: "pl-6 pt-4 pr-6 pb-6",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+            className: "pb-4 flex justify-start gap-2",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("button", {
+              onClick: function onClick() {
+                return navigateTeamMember('prev');
+              },
+              className: "w-5 h-5 bg-black text-white rounded-full hover:bg-gray-800 flex items-center justify-center transition-colors duration-200",
+              "aria-label": "Previous slide",
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("svg", {
+                className: "w-5 h-5",
+                fill: "none",
+                stroke: "currentColor",
+                viewBox: "0 0 24 24",
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+                  strokeLinecap: "round",
+                  strokeLinejoin: "round",
+                  strokeWidth: 2,
+                  d: "M15 19l-7-7 7-7"
+                })
+              })
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("button", {
+              onClick: function onClick() {
+                return navigateTeamMember('next');
+              },
+              className: "w-5 h-5 bg-black text-white rounded-full hover:bg-gray-800 flex items-center justify-center transition-colors duration-200",
+              "aria-label": "Next slide",
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("svg", {
+                className: "w-5 h-5",
+                fill: "none",
+                stroke: "currentColor",
+                viewBox: "0 0 24 24",
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+                  strokeLinecap: "round",
+                  strokeLinejoin: "round",
+                  strokeWidth: 2,
+                  d: "M9 5l7 7-7 7"
+                })
+              })
+            })]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+            className: "flex flex-col gap-6",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+              className: "w-full",
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
+                src: selectedMember.selected,
+                alt: selectedMember.name,
+                "class": "m-auto object-center"
+              })
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+              className: "w-full",
+              children: [selectedMember.title && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+                className: "flex justify-between items-center text-black pr-6 mb-2 border-black border-b ml-1",
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
+                  className: "text-lg ",
+                  children: selectedMember.title
+                })
+              }), selectedMember.description && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
+                className: "mb-4",
+                children: selectedMember.description
+              })]
+            })]
+          })]
+        })]
+      })
+    });
+  };
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-    className: "max-w-6xl mx-auto",
+    className: "pl-4 pb-8 pr-4 max-w-6xl mx-auto",
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-      className: "flex justify-between items-center mb-8",
+      className: "justify-between items-center mb-8 w-full block",
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h2", {
-          className: "text-4xl font-bold text-black mb-4",
+          className: "text-4xl font-bold text-black mb-2 ",
           children: "Our Team"
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
           className: "w-full h-px bg-black"
         })]
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-        className: "flex gap-2",
+        className: "flex gap-2 justify-end pt-4",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("button", {
           onClick: prevSlide,
-          className: "w-10 h-10 hover:bg-gray-200 rounded-full flex items-center justify-center transition-colors duration-200",
+          className: "w-10 h-10 hover:bg-gray-200 flex items-center justify-center transition-colors duration-200",
           "aria-label": "Previous slide",
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("svg", {
             className: "w-5 h-5",
@@ -35103,7 +35268,7 @@ var OurTeamSection = function OurTeamSection() {
           })
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("button", {
           onClick: nextSlide,
-          className: "w-10 h-10 hover:bg-gray-200 rounded-full flex items-center justify-center transition-colors duration-200",
+          className: "w-10 h-10 hover:bg-gray-200 flex items-center justify-center transition-colors duration-200",
           "aria-label": "Next slide",
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("svg", {
             className: "w-5 h-5",
@@ -35140,7 +35305,7 @@ var OurTeamSection = function OurTeamSection() {
           }, slideIndex);
         })
       })
-    })]
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(TeamMemberPopup, {})]
   });
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (OurTeamSection);
