@@ -34921,6 +34921,7 @@ var OurTeamSection = function OurTeamSection() {
     setCurrentSlide = _useState2[1];
 
   // Team member data - This could come from a get call
+  // we can use the IDs as keys. Good for React to identify items have changed, added, or removed
   var teamMembers = [{
     id: 1,
     image: '/images/team-member-1.png',
@@ -34988,6 +34989,27 @@ var OurTeamSection = function OurTeamSection() {
     image: '/images/team-member-2.png',
     name: 'Team Member 2'
   }];
+
+  // This will work out our pages (5 to a page)
+  var totalSlides = teamMembers.length / 5;
+
+  // For selecting our member (possible add a popup feature?)
+  var handleTeamMemberClick = function handleTeamMemberClick(member) {
+    console.log('Team member clicked:', member);
+  };
+  // next arrow button
+  var nextSlide = function nextSlide() {
+    setCurrentSlide(function (prev) {
+      return (prev + 1) % totalSlides;
+    });
+  };
+
+  // prev arrow button
+  var prevSlide = function prevSlide() {
+    setCurrentSlide(function (prev) {
+      return (prev - 1 + totalSlides) % totalSlides;
+    });
+  };
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h1", {
     children: "Our Team"
   });
