@@ -34861,8 +34861,63 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var OurSecondSection = function OurSecondSection() {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h1", {
-    children: "Our Second Section"
+  // images are either stored in companyValues or mobile directory
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+      className: "min-h-screen",
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+        className: "w-full grid grid-cols-1 sm:grid-cols-[1fr_2fr] gap-8 pb-8 pt-20",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+            className: "w-full bg-[#F5F5F5]",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h2", {
+              className: "sm:relative sm:top-4 w-1/2 bg-white pl-8 pr-8 text-[20px] sm:text-[50px] max-w-[350px] leading-normal font-bold text-black",
+              children: "Company Values & Ethos"
+            })
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
+            className: "pb-0 md:pb-6 float-right",
+            src: "/images/companyValues/company.png"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
+            className: "pb-6 float-right hidden sm:block",
+            src: "/images/companyValues/thatched-cottage.png"
+          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
+            className: "pb-6 hidden sm:block",
+            src: "/images/companyValues/property-slice-1.png"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
+            className: "pb-16 hidden sm:block",
+            src: "/images/companyValues/property-slice-2.png"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
+            className: "pb-8 sm:hidden",
+            src: "/images/mobile/mobile-4.png"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+            className: "hidden sm:block text-brand",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
+              children: "We know that our continued success is down to our customers, and treating them with respect. Starting from humble beginnings means that we value each and every customer equally, regardless of the order size."
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
+              children: "As the world becomes more automated by the day, we promise never to lose the personal touch with our customers that we built the foundations of the business on. Our staff are friendly, knowledgeable and always happy to assist."
+            })]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+            className: "sm:hidden bg-black text-white p-[20px] my-0",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
+              children: "As the world becomes more automated by the day, we promise never to lose the personal touch with our customers that we built the foundations of the business on. Our staff are friendly, knowledgeable and always happy to assist."
+            })
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+            className: "sm:hidden h-[128px] my-8",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
+              className: "float-right ",
+              src: "/images/mobile/mobile-5.png"
+            })
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+            className: "sm:hidden bg-black text-white p-[20px] my-0",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
+              children: "We know that our continued success is down to our customers, and treating them with respect. Starting from humble beginnings means that we value each and every customer equally, regardless of the order size."
+            })
+          })]
+        })]
+      })
+    })
   });
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (OurSecondSection);

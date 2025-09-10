@@ -16,7 +16,7 @@
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
     @stack('styles')
 </head>
-<body class="bg-gray-100">
+<body class="md:bg-gray-100">
     <main>
         @yield('content')
     </main>
