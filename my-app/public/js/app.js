@@ -34915,7 +34915,7 @@ function _arrayWithHoles(r) { if (Array.isArray(r)) return r; }
 
 
 var OurTeamSection = function OurTeamSection() {
-  var _useState = useState(0),
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(0),
     _useState2 = _slicedToArray(_useState, 2),
     currentSlide = _useState2[0],
     setCurrentSlide = _useState2[1];
@@ -35010,8 +35010,78 @@ var OurTeamSection = function OurTeamSection() {
       return (prev - 1 + totalSlides) % totalSlides;
     });
   };
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h1", {
-    children: "Our Team"
+  var renderTeamMember = function renderTeamMember(member) {
+    var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false),
+      _useState4 = _slicedToArray(_useState3, 2),
+      isHovered = _useState4[0],
+      setIsHovered = _useState4[1];
+    var imageSrc = isHovered && member.hover ? member.hover : member.image;
+    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+      className: " rounded-lg overflow-hidden cursor-pointer hover:shadow-lg transition-shadow duration-200",
+      onClick: function onClick() {
+        return handleTeamMemberClick(member);
+      },
+      onMouseEnter: function onMouseEnter() {
+        return setIsHovered(true);
+      },
+      onMouseLeave: function onMouseLeave() {
+        return setIsHovered(false);
+      },
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
+        src: imageSrc,
+        alt: member.name,
+        className: "w-full h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-300"
+      })
+    }, member.id);
+  };
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+    className: "max-w-6xl mx-auto",
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+      className: "flex justify-between items-center mb-8",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h2", {
+          className: "text-4xl font-bold text-black mb-4",
+          children: "Our Team"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+          className: "w-full h-px bg-gray-300"
+        })]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+        className: "flex gap-2",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("button", {
+          onClick: prevSlide,
+          className: "w-10 h-10 hover:bg-gray-200 rounded-full flex items-center justify-center transition-colors duration-200",
+          "aria-label": "Previous slide",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("svg", {
+            className: "w-5 h-5",
+            fill: "none",
+            stroke: "currentColor",
+            viewBox: "0 0 24 24",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+              strokeLinecap: "round",
+              strokeLinejoin: "round",
+              strokeWidth: 2,
+              d: "M15 19l-7-7 7-7"
+            })
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("button", {
+          onClick: nextSlide,
+          className: "w-10 h-10 hover:bg-gray-200 rounded-full flex items-center justify-center transition-colors duration-200",
+          "aria-label": "Next slide",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("svg", {
+            className: "w-5 h-5",
+            fill: "none",
+            stroke: "currentColor",
+            viewBox: "0 0 24 24",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+              strokeLinecap: "round",
+              strokeLinejoin: "round",
+              strokeWidth: 2,
+              d: "M9 5l7 7-7 7"
+            })
+          })
+        })]
+      })]
+    })
   });
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (OurTeamSection);

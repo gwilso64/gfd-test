@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState }  from 'react';
 
 const OurTeamSection  = () => {
 
@@ -43,7 +43,57 @@ const OurTeamSection  = () => {
         setCurrentSlide((prev) => (prev - 1 + totalSlides) % totalSlides);
     };
 
-    return (<h1>Our Team</h1>);
+    const renderTeamMember = (member) => {
+
+    const [isHovered, setIsHovered] = useState(false);
+    const imageSrc = isHovered && member.hover ? member.hover : member.image;
+
+    return (
+        <div 
+            key={member.id}
+            className=" rounded-lg overflow-hidden cursor-pointer hover:shadow-lg transition-shadow duration-200"
+            onClick={() => handleTeamMemberClick(member)}
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+        >
+            <img 
+            src={imageSrc}
+            alt={member.name}
+            className="w-full h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-300"
+            />
+        </div>);
+    };
+
+    return (
+        <div className="max-w-6xl mx-auto">
+            <div className="flex justify-between items-center mb-8">
+            <div>
+                <h2 className="text-4xl font-bold text-black mb-4">Our Team</h2>
+                <div className="w-full h-px bg-gray-300"></div>
+            </div>
+            <div className="flex gap-2">
+                <button 
+                    onClick={prevSlide}
+                    className="w-10 h-10 hover:bg-gray-200 rounded-full flex items-center justify-center transition-colors duration-200"
+                    aria-label="Previous slide"
+                >
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                </svg>
+                </button>
+                <button 
+                    onClick={nextSlide}
+                    className="w-10 h-10 hover:bg-gray-200 rounded-full flex items-center justify-center transition-colors duration-200"
+                    aria-label="Next slide"
+                >
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+                </button>
+            </div>
+            </div>
+        </div>
+    );
 }
 
 export default OurTeamSection;
