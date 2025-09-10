@@ -34936,71 +34936,99 @@ var OurTeamSection = function OurTeamSection() {
     id: 1,
     image: '/images/team/team-member-1.png',
     name: 'Team Member 1',
-    hover: '/images/team/hover/team-member-1h.png'
+    hover: '/images/team/hover/team-member-1h.png',
+    title: 'Job Title',
+    description: 'Our aim is to offer the industry’s best quality products at a competitive price, direct to homeowners. More and more customers are now looking for the most cost-effective way to get the same quality products at a fraction of the high street price, and we are happy to advise and liaise with your builders, fitters or project managers throughout your order. For customers who want the full survey and installation service, we truly believe we offer the best package in the business. Our nationwide installation service is unrivalled by any other online company - click here to read more.'
   }, {
     id: 2,
     image: '/images/team/team-g.png',
-    name: 'Team Member G'
+    name: 'Team Member G',
+    title: 'Job Title',
+    description: 'Our aim is to offer the industry’s best quality products at a competitive price, direct to homeowners. More and more customers are now looking for the most cost-effective way to get the same quality products at a fraction of the high street price, and we are happy to advise and liaise with your builders, fitters or project managers throughout your order. For customers who want the full survey and installation service, we truly believe we offer the best package in the business. Our nationwide installation service is unrivalled by any other online company - click here to read more.'
   }, {
     id: 3,
     image: '/images/team/team-member-2.png',
-    name: 'Team Member 2'
+    name: 'Team Member 2',
+    title: 'Job Title',
+    description: 'Our aim is to offer the industry’s best quality products at a competitive price, direct to homeowners. More and more customers are now looking for the most cost-effective way to get the same quality products at a fraction of the high street price, and we are happy to advise and liaise with your builders, fitters or project managers throughout your order. For customers who want the full survey and installation service, we truly believe we offer the best package in the business. Our nationwide installation service is unrivalled by any other online company - click here to read more.'
   }, {
     id: 4,
     image: '/images/team/team-member-1.png',
     name: 'Team Member 1',
-    hover: '/images/team/hover/team-member-1h.png'
+    hover: '/images/team/hover/team-member-1h.png',
+    title: 'Job Title',
+    description: 'Our aim is to offer the industry’s best quality products at a competitive price, direct to homeowners. More and more customers are now looking for the most cost-effective way to get the same quality products at a fraction of the high street price, and we are happy to advise and liaise with your builders, fitters or project managers throughout your order. For customers who want the full survey and installation service, we truly believe we offer the best package in the business. Our nationwide installation service is unrivalled by any other online company - click here to read more.'
   }, {
     id: 5,
     image: '/images/team/team-member-2.png',
-    name: 'Team Member 2'
+    name: 'Team Member 2',
+    title: 'Job Title',
+    description: 'Our aim is to offer the industry’s best quality products at a competitive price, direct to homeowners. More and more customers are now looking for the most cost-effective way to get the same quality products at a fraction of the high street price, and we are happy to advise and liaise with your builders, fitters or project managers throughout your order. For customers who want the full survey and installation service, we truly believe we offer the best package in the business. Our nationwide installation service is unrivalled by any other online company - click here to read more.'
   }, {
     id: 6,
     image: '/images/team/team-member-1.png',
     name: 'Team Member 1',
-    hover: '/images/team/hover/team-member-1h.png'
+    hover: '/images/team/hover/team-member-1h.png',
+    title: 'Job Title',
+    description: 'Our aim is to offer the industry’s best quality products at a competitive price, direct to homeowners. More and more customers are now looking for the most cost-effective way to get the same quality products at a fraction of the high street price, and we are happy to advise and liaise with your builders, fitters or project managers throughout your order. For customers who want the full survey and installation service, we truly believe we offer the best package in the business. Our nationwide installation service is unrivalled by any other online company - click here to read more.'
   }, {
     id: 7,
     image: '/images/team/team-member-2.png',
-    name: 'Team Member 2'
+    name: 'Team Member 2',
+    title: 'Job Title',
+    description: 'Our aim is to offer the industry’s best quality products at a competitive price, direct to homeowners. More and more customers are now looking for the most cost-effective way to get the same quality products at a fraction of the high street price, and we are happy to advise and liaise with your builders, fitters or project managers throughout your order. For customers who want the full survey and installation service, we truly believe we offer the best package in the business. Our nationwide installation service is unrivalled by any other online company - click here to read more.'
   }, {
     id: 8,
     image: '/images/team/team-f.png',
-    name: 'Team Member F'
+    name: 'Team Member F',
+    title: 'Job Title',
+    description: 'Our aim is to offer the industry’s best quality products at a competitive price, direct to homeowners. More and more customers are now looking for the most cost-effective way to get the same quality products at a fraction of the high street price, and we are happy to advise and liaise with your builders, fitters or project managers throughout your order. For customers who want the full survey and installation service, we truly believe we offer the best package in the business. Our nationwide installation service is unrivalled by any other online company - click here to read more.'
   }, {
     id: 9,
     image: '/images/team/team-member-1.png',
     name: 'Team Member 1',
-    hover: '/images/team/hover/team-member-1h.png'
+    hover: '/images/team/hover/team-member-1h.png',
+    title: 'Job Title',
+    description: 'Our aim is to offer the industry’s best quality products at a competitive price, direct to homeowners. More and more customers are now looking for the most cost-effective way to get the same quality products at a fraction of the high street price, and we are happy to advise and liaise with your builders, fitters or project managers throughout your order. For customers who want the full survey and installation service, we truly believe we offer the best package in the business. Our nationwide installation service is unrivalled by any other online company - click here to read more.'
   }, {
     id: 10,
     image: '/images/team/team-member-2.png',
-    name: 'Team Member 2'
+    name: 'Team Member 2',
+    title: 'Job Title',
+    description: 'Our aim is to offer the industry’s best quality products at a competitive price, direct to homeowners. More and more customers are now looking for the most cost-effective way to get the same quality products at a fraction of the high street price, and we are happy to advise and liaise with your builders, fitters or project managers throughout your order. For customers who want the full survey and installation service, we truly believe we offer the best package in the business. Our nationwide installation service is unrivalled by any other online company - click here to read more.'
   }, {
     id: 11,
     image: '/images/team/team-member-1.png',
     name: 'Team Member 1',
-    hover: '/images/team/hover/team-member-1h.png'
+    hover: '/images/team/hover/team-member-1h.png',
+    title: 'Job Title',
+    description: 'Our aim is to offer the industry’s best quality products at a competitive price, direct to homeowners. More and more customers are now looking for the most cost-effective way to get the same quality products at a fraction of the high street price, and we are happy to advise and liaise with your builders, fitters or project managers throughout your order. For customers who want the full survey and installation service, we truly believe we offer the best package in the business. Our nationwide installation service is unrivalled by any other online company - click here to read more.'
   }, {
     id: 12,
     image: '/images/team/team-member-2.png',
-    name: 'Team Member 2'
+    name: 'Team Member 2',
+    title: 'Job Title',
+    description: 'Our aim is to offer the industry’s best quality products at a competitive price, direct to homeowners. More and more customers are now looking for the most cost-effective way to get the same quality products at a fraction of the high street price, and we are happy to advise and liaise with your builders, fitters or project managers throughout your order. For customers who want the full survey and installation service, we truly believe we offer the best package in the business. Our nationwide installation service is unrivalled by any other online company - click here to read more.'
   }, {
     id: 13,
     image: '/images/team/team-member-1.png',
     name: 'Team Member 1',
-    hover: '/images/team/hover/team-member-1h.png'
+    hover: '/images/team/hover/team-member-1h.png',
+    title: 'Job Title',
+    description: 'Our aim is to offer the industry’s best quality products at a competitive price, direct to homeowners. More and more customers are now looking for the most cost-effective way to get the same quality products at a fraction of the high street price, and we are happy to advise and liaise with your builders, fitters or project managers throughout your order. For customers who want the full survey and installation service, we truly believe we offer the best package in the business. Our nationwide installation service is unrivalled by any other online company - click here to read more.'
   }, {
     id: 14,
     image: '/images/team/team-d.png',
-    name: 'Team Member D'
+    name: 'Team Member D',
+    title: 'Job Title',
+    description: 'Our aim is to offer the industry’s best quality products at a competitive price, direct to homeowners. More and more customers are now looking for the most cost-effective way to get the same quality products at a fraction of the high street price, and we are happy to advise and liaise with your builders, fitters or project managers throughout your order. For customers who want the full survey and installation service, we truly believe we offer the best package in the business. Our nationwide installation service is unrivalled by any other online company - click here to read more.'
   }, {
     id: 15,
     image: '/images/team/team-member-2.png',
-    name: 'Team Member 2'
+    name: 'Team Member 2',
+    title: 'Job Title',
+    description: 'Our aim is to offer the industry’s best quality products at a competitive price, direct to homeowners. More and more customers are now looking for the most cost-effective way to get the same quality products at a fraction of the high street price, and we are happy to advise and liaise with your builders, fitters or project managers throughout your order. For customers who want the full survey and installation service, we truly believe we offer the best package in the business. Our nationwide installation service is unrivalled by any other online company - click here to read more.'
   }];
-
-  // This will work out our pages (5 to a page)
   var totalSlides = teamMembers.length / 5;
 
   // For selecting our member (possible add a popup feature?)
