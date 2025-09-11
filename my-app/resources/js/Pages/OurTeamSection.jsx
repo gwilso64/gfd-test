@@ -104,7 +104,7 @@ const OurTeamSection = () => {
             ? parseInt(selectedMember.id.toString().split('-').pop())
             : selectedMember.id;
             
-        const currentIndex = teamMembers.findIndex(member => member.id === originalId);
+        const currentIndex = teams.findIndex(member => member.id === originalId);
         
         // just incase
         if (currentIndex === -1) return;
@@ -112,12 +112,12 @@ const OurTeamSection = () => {
         let newIndex;
         
         if (direction === 'next') {
-            newIndex = currentIndex < teamMembers.length - 1 ? currentIndex + 1 : 0;
+            newIndex = currentIndex < teams.length - 1 ? currentIndex + 1 : 0;
         } else {
-            newIndex = currentIndex > 0 ? currentIndex - 1 : teamMembers.length - 1;
+            newIndex = currentIndex > 0 ? currentIndex - 1 : teams.length - 1;
         }
         
-        setSelectedMember(teamMembers[newIndex]);
+        setSelectedMember(teams[newIndex]);
     };
 
     const TeamMemberPopup = () => {
@@ -165,7 +165,7 @@ const OurTeamSection = () => {
                                 <img 
                                     src={selectedMember.selected}
                                     alt={selectedMember.name}
-                                    class="m-auto object-center"
+                                    className="m-auto object-center"
                                 />
                             </div>
 

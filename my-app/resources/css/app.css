@@ -82,3 +82,18 @@ body
     z-index: 444;
 }
 
+  @media (max-width: 1300px) {
+    .responsive-image {
+      @apply w-[100px];
+    }
+    .desktop-images {
+        display: none;
+    }
+    .responsive-abs-image {
+        width: 280px;
+    }
+    .tablet {
+        display: block; 
+    }
+
+  }
