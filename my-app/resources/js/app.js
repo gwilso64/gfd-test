@@ -2,9 +2,9 @@
 // App.jsx
 import React from 'react';
 import { createRoot } from 'react-dom/client';
-import OurStorySection from './components/OurStorySection';
-import CompanyValuesSection from './components/CompanyValuesSection';
-import OurTeamSection from './components/OurTeamSection';
+import OurStorySection from './Pages/OurStorySection';
+import CompanyValuesSection from './Pages/CompanyValuesSection';
+import OurTeamSection from './Pages/OurTeamSection';
 
 
 function App() {

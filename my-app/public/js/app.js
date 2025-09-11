@@ -34800,55 +34800,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/js/app.js":
-/*!*****************************!*\
-  !*** ./resources/js/app.js ***!
-  \*****************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_dom_client__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom/client */ "./node_modules/react-dom/client.js");
-/* harmony import */ var _components_OurStorySection__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/OurStorySection */ "./resources/js/components/OurStorySection.jsx");
-/* harmony import */ var _components_CompanyValuesSection__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/CompanyValuesSection */ "./resources/js/components/CompanyValuesSection.jsx");
-/* harmony import */ var _components_OurTeamSection__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/OurTeamSection */ "./resources/js/components/OurTeamSection.jsx");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-// App.jsx
-
-
-
-
-
-
-function App() {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
-    className: "App",
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.Fragment, {
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_components_OurStorySection__WEBPACK_IMPORTED_MODULE_2__["default"], {})
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.Fragment, {
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_components_CompanyValuesSection__WEBPACK_IMPORTED_MODULE_3__["default"], {})
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.Fragment, {
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_components_OurTeamSection__WEBPACK_IMPORTED_MODULE_4__["default"], {})
-    })]
-  });
-}
-
-// Mount the React app to the DOM
-document.addEventListener('DOMContentLoaded', function () {
-  var container = document.getElementById('react-app');
-  if (container) {
-    var root = (0,react_dom_client__WEBPACK_IMPORTED_MODULE_1__.createRoot)(container);
-    root.render(/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(App, {}));
-  }
-});
-
-/***/ }),
-
-/***/ "./resources/js/components/CompanyValuesSection.jsx":
-/*!**********************************************************!*\
-  !*** ./resources/js/components/CompanyValuesSection.jsx ***!
-  \**********************************************************/
+/***/ "./resources/js/Pages/CompanyValuesSection.jsx":
+/*!*****************************************************!*\
+  !*** ./resources/js/Pages/CompanyValuesSection.jsx ***!
+  \*****************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -34868,12 +34823,12 @@ var CompanyValuesSection = function CompanyValuesSection() {
     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
       className: "min-h-screen",
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-        className: "w-full grid grid-cols-1 sm:grid-cols-[1fr_2fr] gap-8 pb-8 pt-20",
+        className: "w-full grid grid-cols-1 sm:grid-cols-[1fr_2fr] gap-8 pb-8 pt-0 sm:pt-20",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-            className: "w-full bg-[#F5F5F5]",
+            className: "w-full sm:bg-[#F5F5F5]",
             children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h2", {
-              className: "sm:relative sm:top-4 w-1/2 bg-white pl-8 pr-8 text-[20px] sm:text-[50px] max-w-[350px] leading-normal font-bold text-black",
+              className: "pl-8 pr-8 text-[20px] leading-normal font-bold text-black sm:col-span-1 md:col-span-full sm:relative md:static sm:top-4 md:top-0 sm:w-1/2 md:w-auto sm:text-[50px] md:text-[20px] sm:max-w-[350px] md:max-w-none",
               children: "Company Values & Ethos"
             })
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
@@ -34926,10 +34881,10 @@ var CompanyValuesSection = function CompanyValuesSection() {
 
 /***/ }),
 
-/***/ "./resources/js/components/OurStorySection.jsx":
-/*!*****************************************************!*\
-  !*** ./resources/js/components/OurStorySection.jsx ***!
-  \*****************************************************/
+/***/ "./resources/js/Pages/OurStorySection.jsx":
+/*!************************************************!*\
+  !*** ./resources/js/Pages/OurStorySection.jsx ***!
+  \************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -34942,18 +34897,41 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var OurStorySection = function OurStorySection() {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h1", {
-    children: "Our Story"
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+    className: "bg-white min-h-screen p-4",
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+      className: "max-w-4xl mx-auto",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+        className: "bg-white p-8",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h2", {
+          className: "text-2xl font-bold mb-4 pb-6 border-b-2",
+          children: "Our Story"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
+          className: "mb-4",
+          children: "Coming from a lifelong background in the double glazing industry, we began trading online in 2008. Our core product offering was composite doors, and we were one of the first companies in the UK to pioneer online ordering for this product."
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
+          className: "mb-4",
+          children: "Over the past 15 years, we have expanded our portfolio of products across a range of composite, aluminium, uPVC and security products. Our goal was always to offer a complete home improvement solution, which we now carry out nationwide through GFD Homes."
+        })]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+        className: "mt-8",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
+          src: "/images/ourStory/main.png",
+          alt: "Desktop main image",
+          className: "w-full max-w-md mx-auto"
+        })
+      })]
+    })
   });
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (OurStorySection);
 
 /***/ }),
 
-/***/ "./resources/js/components/OurTeamSection.jsx":
-/*!****************************************************!*\
-  !*** ./resources/js/components/OurTeamSection.jsx ***!
-  \****************************************************/
+/***/ "./resources/js/Pages/OurTeamSection.jsx":
+/*!***********************************************!*\
+  !*** ./resources/js/Pages/OurTeamSection.jsx ***!
+  \***********************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -35366,6 +35344,51 @@ var OurTeamSection = function OurTeamSection() {
   });
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (OurTeamSection);
+
+/***/ }),
+
+/***/ "./resources/js/app.js":
+/*!*****************************!*\
+  !*** ./resources/js/app.js ***!
+  \*****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_dom_client__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom/client */ "./node_modules/react-dom/client.js");
+/* harmony import */ var _Pages_OurStorySection__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Pages/OurStorySection */ "./resources/js/Pages/OurStorySection.jsx");
+/* harmony import */ var _Pages_CompanyValuesSection__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Pages/CompanyValuesSection */ "./resources/js/Pages/CompanyValuesSection.jsx");
+/* harmony import */ var _Pages_OurTeamSection__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Pages/OurTeamSection */ "./resources/js/Pages/OurTeamSection.jsx");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+// App.jsx
+
+
+
+
+
+
+function App() {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+    className: "App",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.Fragment, {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_Pages_OurStorySection__WEBPACK_IMPORTED_MODULE_2__["default"], {})
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.Fragment, {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_Pages_CompanyValuesSection__WEBPACK_IMPORTED_MODULE_3__["default"], {})
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.Fragment, {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_Pages_OurTeamSection__WEBPACK_IMPORTED_MODULE_4__["default"], {})
+    })]
+  });
+}
+
+// Mount the React app to the DOM
+document.addEventListener('DOMContentLoaded', function () {
+  var container = document.getElementById('react-app');
+  if (container) {
+    var root = (0,react_dom_client__WEBPACK_IMPORTED_MODULE_1__.createRoot)(container);
+    root.render(/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(App, {}));
+  }
+});
 
 /***/ })
 
