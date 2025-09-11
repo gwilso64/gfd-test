@@ -97,3 +97,18 @@ body
     }
 
   }
+ @media (max-width: 1024px) {
+  .left-bottom {
+display: none;
+  }
+ }
+    @media (max-width: 767px) {
+        .main-block {
+            margin-bottom: 200px;
+        }
+    }
+    @media (max-width: 400px) {
+        .main-block {
+            margin-bottom: 370px;
+        }
+    }

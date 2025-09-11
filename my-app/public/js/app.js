@@ -34946,9 +34946,9 @@ var CompanyValuesSection = function CompanyValuesSection() {
         className: "w-full grid grid-cols-1 sm:grid-cols-[1fr_2fr] gap-8 pb-8 lg:pt-20 md:pt-20 sm:pt-0",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-            className: "w-full sm:bg-[#F5F5F5]",
+            className: "w-full bg-[#F5F5F5] sm:bg-transparent",
             children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h2", {
-              className: "pl-8 pr-8 text-[20px] leading-normal font-bold text-black sm:col-span-1 md:col-span-full sm:relative md:static sm:top-4 md:top-0 sm:w-1/2 md:w-auto sm:text-[50px] md:text-[50px] md:pb-4 sm:max-w-[350px] md:max-w-none",
+              className: "pl-8 pr-8 text-[20px] leading-normal font-bold text-black sm:col-span-1 md:col-span-full sm:relative md:static sm:top-4 md:top-0 sm:w-1/2 md:w-auto sm:text-[50px] md:text-[50px] md:pb-4 max-w-[250px] sm:max-w-none bg-white sm:bg-transparent",
               children: "Company Values & Ethos"
             })
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
@@ -35033,7 +35033,7 @@ var OurStorySection = function OurStorySection() {
 
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.Fragment, {
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
-      className: "hidden md:block z-[2] responsive-image transition-opacity duration-300",
+      className: "hidden md:block lg:z-[2] md:z-[-1] responsive-image transition-opacity duration-300",
       src: "images/ourStory/door-side-bar.png",
       alt: "Sidebar"
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
@@ -35055,9 +35055,9 @@ var OurStorySection = function OurStorySection() {
           })
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
           className: "text-content main-box relative flex sm:justify-start justify-center lg:pl-12 pr-12 pb-24 pt-12 bg-cover bg-center sm:ml-6 bg-no-repeat",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
             className: "relative text-content",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
               className: "bg-white pl-4 pt-4 pr-8 w-full max-w-4xl z-10 relative flex",
               children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
                 className: "lg:w-4/5 pr-6 bg-white p-8",
@@ -35075,7 +35075,11 @@ var OurStorySection = function OurStorySection() {
                   })]
                 })
               })
-            })
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
+              src: "/images/mobile/mobile-2.png",
+              alt: "Mobile bottom image",
+              className: "md:hidden transition-opacity duration-300 mt-4"
+            })]
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
             src: "/images/ourStory/main.png",
             alt: "Desktop main image",
@@ -35087,12 +35091,7 @@ var OurStorySection = function OurStorySection() {
             className: "max-w-[433px] top-10 object-cover p-2 z-50 absolute transform origin-left transition-opacity duration-300 responsive-abs-image hidden lg:block"
           })]
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-          className: "md:hidden relative mt-[-110px]",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
-            src: "/images/mobile/mobile-2.png",
-            alt: "Mobile bottom image",
-            className: "transition-opacity duration-300"
-          })
+          className: "md:hidden relative mt-[-110px]"
         })]
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
         className: "bottom-images w-full sm:w-3/4 md:w-2/3 lg:w-1/2 mx-auto transition-opacity duration-300 hidden lg:block hidden md:block",
@@ -35102,19 +35101,18 @@ var OurStorySection = function OurStorySection() {
           alt: "Left bottom image"
         })
       })]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
       className: "md:hidden text-[14.4px] mt-6 float-right right-0 px-5 pt-5 pb-0 m-0 w-[calc(100%-20px)] block h-[248px] bg-[#F5F5F5]",
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
         className: "font-['Red_Hat_Text'] font-semibold transition-opacity duration-300",
         children: "Over the past 15 years, we have expanded our portfolio of products across a range of composite, aluminium, uPVC and security products. Our goal was always to offer a complete home improvement solution, which we now carry out nationwide through GFD Homes."
-      })
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-      className: "md:hidden block clear-both relative ml-auto h-[250px] -top-[70px]",
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
-        className: "float-right transition-opacity duration-300",
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
+        className: "md:hidden float-right transition-opacity duration-300 -right-[20px] relative",
         src: "/images/mobile/mobile-3.png",
         alt: "Mobile side image"
-      })
+      })]
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+      className: "md:hidden block clear-both relative ml-auto h-[250px] -top-[70px]"
     })]
   });
 };

@@ -20,7 +20,7 @@ const OurStorySection = () => {
     <>
       {/* Top left image, separate from main body of content. I am thinking responsive-image could be used to animate image later */}
       <img 
-        className="hidden md:block z-[2] responsive-image transition-opacity duration-300"
+        className="hidden md:block lg:z-[2] md:z-[-1] responsive-image transition-opacity duration-300"
         src="images/ourStory/door-side-bar.png"
         alt="Sidebar"
       />
@@ -57,6 +57,11 @@ const OurStorySection = () => {
                   </div>
                 </div>
               </div>
+               <img 
+                  src="/images/mobile/mobile-2.png" 
+                  alt="Mobile bottom image"
+                  className="md:hidden transition-opacity duration-300 mt-4"
+                />
             </div>
             {/* Main desktop image, positioned left of mainbox */}
             <img 
@@ -70,11 +75,7 @@ const OurStorySection = () => {
           </div>
           {/* left  aligned - Mobile Image */}
           <div className="md:hidden relative mt-[-110px]">
-            <img 
-              src="/images/mobile/mobile-2.png" 
-              alt="Mobile bottom image"
-              className="transition-opacity duration-300"
-            />
+
           </div> 
         </div>
         {/* Bottom aligned image - desktop only */}
@@ -91,15 +92,13 @@ const OurStorySection = () => {
         <p className="font-['Red_Hat_Text'] font-semibold transition-opacity duration-300">
           Over the past 15 years, we have expanded our portfolio of products across a range of composite, aluminium, uPVC and security products. Our goal was always to offer a complete home improvement solution, which we now carry out nationwide through GFD Homes.
         </p>
-      </div>
-      {/* Right aligned - Mobile Image */}
-      <div className="md:hidden block clear-both relative ml-auto h-[250px] -top-[70px]">
         <img 
-          className="float-right transition-opacity duration-300"
+          className="md:hidden float-right transition-opacity duration-300 -right-[20px] relative"
           src="/images/mobile/mobile-3.png"
           alt="Mobile side image"
         />
       </div>
+      <div className="md:hidden block clear-both relative ml-auto h-[250px] -top-[70px]"></div>
     </>
   );
 };

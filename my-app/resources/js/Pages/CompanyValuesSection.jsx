@@ -11,10 +11,10 @@ const CompanyValuesSection = () => {
       <div className="min-h-screen">
         <div className="w-full grid grid-cols-1 sm:grid-cols-[1fr_2fr] gap-8 pb-8 lg:pt-20 md:pt-20 sm:pt-0">
           <div>
-            <div className="w-full sm:bg-[#F5F5F5]">
-              <h2 className="pl-8 pr-8 text-[20px] leading-normal font-bold text-black sm:col-span-1 md:col-span-full sm:relative md:static sm:top-4 md:top-0 sm:w-1/2 md:w-auto sm:text-[50px] md:text-[50px] md:pb-4 sm:max-w-[350px] md:max-w-none">
-              Company Values & Ethos
-              </h2>
+            <div className="w-full bg-[#F5F5F5] sm:bg-transparent">
+                <h2 className="pl-8 pr-8 text-[20px] leading-normal font-bold text-black sm:col-span-1 md:col-span-full sm:relative md:static sm:top-4 md:top-0 sm:w-1/2 md:w-auto sm:text-[50px] md:text-[50px] md:pb-4 max-w-[250px] sm:max-w-none bg-white sm:bg-transparent">
+                    Company Values & Ethos
+                </h2>
             </div>
             <img className="pb-0 md:pb-6 float-right" src="/images/companyValues/company.png"/>
             <img className="pb-6 float-right hidden sm:block" src="/images/companyValues/thatched-cottage.png" />
