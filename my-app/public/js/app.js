@@ -35014,12 +35014,29 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _data_locations__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../data/locations */ "./resources/js/data/locations.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+function _slicedToArray(r, e) { return _arrayWithHoles(r) || _iterableToArrayLimit(r, e) || _unsupportedIterableToArray(r, e) || _nonIterableRest(); }
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) return _arrayLikeToArray(r, a); var t = {}.toString.call(r).slice(8, -1); return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray(r, a) : void 0; } }
+function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }
+function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (null != t) { var e, n, i, u, a = [], f = !0, o = !1; try { if (i = (t = t.call(r)).next, 0 === l) { if (Object(t) !== t) return; f = !1; } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0); } catch (r) { o = !0, n = r; } finally { try { if (!f && null != t["return"] && (u = t["return"](), Object(u) !== u)) return; } finally { if (o) throw n; } } return a; } }
+function _arrayWithHoles(r) { if (Array.isArray(r)) return r; }
+
 
 
 var OurStorySection = function OurStorySection() {
-  // NOTES
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(0),
+    _useState2 = _slicedToArray(_useState, 2),
+    currentLocationId = _useState2[0],
+    setCurrentLocationId = _useState2[1];
+  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false),
+    _useState4 = _slicedToArray(_useState3, 2),
+    isTransitioning = _useState4[0],
+    setIsTransitioning = _useState4[1];
+  var currentLocation = _data_locations__WEBPACK_IMPORTED_MODULE_1__["default"][currentLocationId];
 
+  // NOTES
   /** 
    * Image Placement:
    * 
@@ -35031,87 +35048,103 @@ var OurStorySection = function OurStorySection() {
    * The thatched house background needs to be center to the content, so this needs to be a background for the main content.
    */
 
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.Fragment, {
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
-      className: "hidden md:block lg:z-[2] md:z-[-1] responsive-image transition-opacity duration-300",
-      src: "images/ourStory/door-side-bar.png",
+  // Auto-cycle with fade animation
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
+    var interval = setInterval(function () {
+      // Start fade out
+      setIsTransitioning(true);
+
+      // After fade out completes, change location and fade back in
+      setTimeout(function () {
+        setCurrentLocationId(function (prev) {
+          return (prev + 1) % _data_locations__WEBPACK_IMPORTED_MODULE_1__["default"].length;
+        });
+        setIsTransitioning(false);
+      }, 200); // 300ms fade out duration
+    }, 5000); // 2 seconds total cycle time
+
+    return function () {
+      return clearInterval(interval);
+    };
+  }, []);
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.Fragment, {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
+      className: "hidden md:block lg:z-[2] md:z-[-1] responsive-image transition-opacity duration-700 ".concat(isTransitioning ? 'opacity-0' : 'opacity-100'),
+      src: currentLocation.images.desktop.sidebar,
       alt: "Sidebar"
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
       className: "main-block relative bg-white md:bg-gradient-to-l md:from-black md:via-black md:to-white md:from-0% md:via-65% md:to-65% min-h-[calc(100vh)] flex items-start md:pt-4 md:pt-0 px-4",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-        className: "relative max-w-4xl w-full",
-        style: {
-          margin: '0px auto'
-        },
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-          className: "image-text-container md:hidden flex justify-end relative top-[30px] z-[9] md:static md:top-auto md:z-auto",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+        className: "relative max-w-4xl w-full mx-auto",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+          className: "md:hidden flex justify-end relative top-[30px] z-[9]",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
             className: "overflow-hidden w-full",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
-              src: "/images/mobile/mobile-1.png",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
+              src: currentLocation.images.mobile.top,
               alt: "Mobile top image",
-              className: "w-3/4 h-full object-cover transition-opacity duration-300 ml-auto"
+              className: "w-3/4 h-full object-cover transition-opacity duration-700 ml-auto ".concat(isTransitioning ? 'opacity-0' : 'opacity-100')
             })
           })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
           className: "text-content main-box relative flex sm:justify-start justify-center lg:pl-12 pr-12 pb-24 pt-12 bg-cover bg-center sm:ml-6 bg-no-repeat",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
             className: "relative text-content",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-              className: "bg-white pl-4 pt-4 pr-8 w-full max-w-4xl z-10 relative flex",
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+              className: "bg-white ml-4 sm:pt-4 pr-8 w-full max-w-4xl z-10 relative flex",
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
                 className: "lg:w-4/5 pr-6 bg-white p-8",
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-                  className: "story-text-container transition-opacity duration-300",
-                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h2", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+                  className: "story-text-container transition-opacity duration-700 ".concat(isTransitioning ? 'opacity-0' : 'opacity-100'),
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h2", {
                     className: "text-2xl font-bold text-gray-800 mb-4 pb-6 border-b-2 border-gray-800",
-                    children: "Our Story"
-                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
+                    children: currentLocation.title
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
                     className: "mb-4",
-                    children: "Coming from a lifelong background in the double glazing industry, we began trading online in 2008. Our core product offering was composite doors, and we were one of the first companies in the UK to pioneer online ordering for this product."
-                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
-                    className: "md:block hidden mb-4 last:mb-0",
-                    children: "Over the past 15 years, we have expanded our portfolio of products across a range of composite, aluminium, uPVC and security products. Our goal was always to offer a complete home improvement solution, which we now carry out nationwide through GFD Homes."
+                    children: currentLocation.content.mainText[0]
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
+                    className: "hidden md:block mb-4 last:mb-0",
+                    children: currentLocation.content.mainText[1]
                   })]
                 })
               })
             })
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
-            src: "/images/ourStory/main.png",
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
+            src: currentLocation.images.desktop.main,
             alt: "Desktop main image",
             width: "433",
             height: "245",
             style: {
               left: "655px"
             },
-            className: "max-w-[433px] top-10 object-cover p-2 z-50 absolute transform origin-left transition-opacity duration-300 responsive-abs-image hidden lg:block"
+            className: "max-w-[433px] top-10 object-cover p-2 z-50 absolute transform origin-left transition-opacity duration-700 responsive-abs-image hidden lg:block  ".concat(isTransitioning ? 'opacity-0' : 'opacity-100')
           })]
         })]
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-        className: "bottom-images w-full sm:w-3/4 md:w-2/3 lg:w-1/2 mx-auto transition-opacity duration-300 hidden lg:block hidden md:block",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+        className: "bottom-images w-full sm:w-3/4 md:w-2/3 lg:w-1/2 mx-auto transition-opacity duration-700 hidden md:block ".concat(isTransitioning ? 'opacity-0' : 'opacity-100'),
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
           className: "left-bottom w-full object-contain",
-          src: "/images/ourStory/bottom-images.png",
+          src: currentLocation.images.desktop.leftBottom,
           alt: "Left bottom image"
         })
       })]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
       className: "md:hidden",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
         className: "relative",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
-          src: "/images/mobile/mobile-2.png",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
+          src: currentLocation.images.mobile.bottom,
           alt: "Mobile bottom image",
-          className: "transition-opacity duration-300 relative -left-[22px] w-full h-auto"
+          className: "transition-opacity duration-700 relative -left-[22px] h-auto -mt-[115px] ".concat(isTransitioning ? 'opacity-0' : 'opacity-100')
         })
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-        className: "bg-[#F5F5F5] px-5 pt-5 pb-5 mt-4",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+        className: "bg-[#F5F5F5] px-5 pt-5 pb-5 mt-4 sm:ml-4 w-[calc(100%-20px)] float-right",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
           className: "font-['Red_Hat_Text'] text-[14.4px] font-semibold mb-4",
-          children: "Over the past 15 years, we have expanded our portfolio of products across a range of composite, aluminium, uPVC and security products. Our goal was always to offer a complete home improvement solution, which we now carry out nationwide through GFD Homes."
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
-          className: "ml-auto block",
-          src: "/images/mobile/mobile-3.png",
+          children: currentLocation.content.mobileText
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
+          className: "ml-auto block -right-[20px] relative",
+          src: currentLocation.images.mobile.side,
           alt: "Mobile side image"
         })]
       })]
@@ -35512,6 +35545,80 @@ document.addEventListener('DOMContentLoaded', function () {
     root.render(/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(App, {}));
   }
 });
+
+/***/ }),
+
+/***/ "./resources/js/data/locations.js":
+/*!****************************************!*\
+  !*** ./resources/js/data/locations.js ***!
+  \****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+// Locations data structure
+var locations = [{
+  id: 1,
+  title: "Our Story",
+  images: {
+    mobile: {
+      top: "/images/mobile/mobile-1.png",
+      bottom: "/images/mobile/mobile-2.png",
+      side: "/images/mobile/mobile-3.png"
+    },
+    desktop: {
+      main: "/images/ourStory/main.png",
+      leftBottom: "images/ourStory/bottom-images.png",
+      rightBottom: "/images/ourStory/composite-doors.png",
+      sidebar: "images/ourStory/door-side-bar.png"
+    }
+  },
+  content: {
+    mainText: ["Coming from a lifelong background in the double glazing industry, we began trading online in 2008. Our core product offering was composite doors, and we were one of the first companies in the UK to pioneer online ordering for this product.", "Over the past 15 years, we have expanded our portfolio of products across a range of composite, aluminium, uPVC and security products. Our goal was always to offer a complete home improvement solution, which we now carry out nationwide through GFD Homes."],
+    mobileText: "Over the past 15 years, we have expanded our portfolio of products across a range of composite, aluminium, uPVC and security products."
+  }
+}, {
+  id: 2,
+  title: "Composite Doors",
+  images: {
+    mobile: {
+      top: "/images/mobile/mobile-1-b.png",
+      bottom: "/images/mobile/mobile-2-b.png",
+      side: "/images/mobile/mobile-3-b.png"
+    },
+    desktop: {
+      main: "/images/ourStory/main-b.png",
+      leftBottom: "images/ourStory/bottom-images-2.png",
+      rightBottom: "/images/ourStory/composite-doors-b.png",
+      sidebar: "images/ourStory/door-side-bar-b.png"
+    }
+  },
+  content: {
+    mainText: ["Proin sagittis lacus lectus. In convallis euismod luctus. Sed aliquet facilisis pulvinar. Duis nec blandit enim. Praesent et interdum nunc. Nulla tincidunt eleifend massa. Donec porta consequat eros at porttitor. placerat hendrerit. Nulla tinci", "tincidunt sem, commodo bibendum nunc hendrerit id. Proin egestas, velit ut faucibus placerat, augue lacus egestas nisl, in congue tellus erat sit amet turpis. Mauris ultricies facilisis diam, ut suscipit lorem. Proin molestie metus nec nibh rhoncus, ut hendrerit tellus rutrum."],
+    mobileText: "urna nec pretium aliquet, velit libero efficitur odio, eu faucibus magna augue vitae turpis. Proin commodo nulla vitae placerat hendrerit. Nulla tincidunt eleifend massa. Donec porta consequat eros at porttitor. Nulla tincidunt eleifend massa. Donec porta consequat eros at porttitor."
+  }
+}];
+
+// Usage example:
+// Current location index
+var currentLocationId = 0;
+
+// Get current location data
+var currentLocation = locations[currentLocationId];
+
+// Access specific elements:
+// currentLocation.title
+// currentLocation.images.desktop.main
+// currentLocation.content.mainText[0]
+
+// Cycle to next location every 20 seconds
+var cycleLocations = function cycleLocations() {
+  currentLocationId = (currentLocationId + 1) % locations.length;
+  return locations[currentLocationId];
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (locations);
 
 /***/ })
 
