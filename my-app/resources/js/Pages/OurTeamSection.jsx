@@ -135,14 +135,14 @@ const OurTeamSection = () => {
 
     return (
         <div className="pl-4 pb-8 pr-4 max-w-6xl mx-auto">
-            <div className="justify-between items-center mb-8 w-full block">
+            <div className="justify-between items-center mb-4 w-full block">
                 <div>
                     <h2 className="text-4xl font-bold text-black mb-2 ">Our Team</h2>
                     {/* line below title */}
                     <div className="w-full h-px bg-black"></div>
                 </div>
-                {/* nav sliders. added hover state, positioning and created rounded svg for button */}
-                <div className="flex gap-2 justify-end pt-4">
+                {/* Desktop nav sliders. added hover state, positioning and created rounded svg for button */}
+                <div className="hidden md:flex gap-2 justify-end pt-4">
                     <button 
                         onClick={prevSlide}
                         className="w-10 h-10 hover:bg-gray-200 flex items-center justify-center transition-colors duration-200"
@@ -155,6 +155,27 @@ const OurTeamSection = () => {
                     <button 
                         onClick={nextSlide}
                         className="w-10 h-10 hover:bg-gray-200 flex items-center justify-center transition-colors duration-200"
+                        aria-label="Next slide"
+                    >
+                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
+                    </button>
+                </div>
+                {/* Mobile nav sliders. black and aligned to the left */}
+                <div className="flex md:hidden gap-2 justify-start pt-4">
+                    <button 
+                        onClick={prevSlide}
+                        className="w-5 h-5 bg-black text-white rounded-full hover:bg-gray-800 flex items-center justify-center transition-colors duration-200"
+                        aria-label="Previous slide"
+                    >
+                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                        </svg>
+                    </button>
+                    <button 
+                        onClick={nextSlide}
+                        className="w-5 h-5 bg-black text-white rounded-full hover:bg-gray-800 flex items-center justify-center transition-colors duration-200"
                         aria-label="Next slide"
                     >
                         <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
