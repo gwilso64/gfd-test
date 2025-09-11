@@ -35164,6 +35164,12 @@ var OurTeamSection = function OurTeamSection() {
     }();
     fetchTeams();
   }, []);
+  if (loading) return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+    children: "Loading..."
+  });
+  if (error) return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+    children: ["Error: ", error]
+  });
   var totalSlides = teamMembers.length / 5;
 
   // For selecting our team member that triggers popup
