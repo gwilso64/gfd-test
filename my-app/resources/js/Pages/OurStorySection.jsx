@@ -25,7 +25,7 @@ const OurStorySection = () => {
         alt="Sidebar"
       />
       {/* Includes black/white background. Black background is 65% of the background */}
-      <div className="main-block relative bg-white md:bg-gradient-to-l md:from-black md:via-black md:to-white md:from-0% md:via-65% md:to-65% min-h-[calc(100vh-15px)] flex items-start md:pt-4 md:pt-0 px-4">
+      <div className="main-block relative bg-white md:bg-gradient-to-l md:from-black md:via-black md:to-white md:from-0% md:via-65% md:to-65% min-h-[calc(100vh)] flex items-start md:pt-4 md:pt-0 px-4">
         {/* Positioning for main content */}
         <div className="relative max-w-4xl w-full" style={{ margin: '0px auto' }}>
           {/* Mobile: Image above on right */}
@@ -57,11 +57,6 @@ const OurStorySection = () => {
                   </div>
                 </div>
               </div>
-               <img 
-                  src="/images/mobile/mobile-2.png" 
-                  alt="Mobile bottom image"
-                  className="md:hidden transition-opacity duration-300 mt-4"
-                />
             </div>
             {/* Main desktop image, positioned left of mainbox */}
             <img 
@@ -73,10 +68,6 @@ const OurStorySection = () => {
               className="max-w-[433px] top-10 object-cover p-2 z-50 absolute transform origin-left transition-opacity duration-300 responsive-abs-image hidden lg:block"
             />
           </div>
-          {/* left  aligned - Mobile Image */}
-          <div className="md:hidden relative mt-[-110px]">
-
-          </div> 
         </div>
         {/* Bottom aligned image - desktop only */}
         <div className="bottom-images w-full sm:w-3/4 md:w-2/3 lg:w-1/2 mx-auto transition-opacity duration-300 hidden lg:block hidden md:block">
@@ -88,17 +79,27 @@ const OurStorySection = () => {
         </div>     
       </div>
       {/* Mobile text */}
-      <div className="md:hidden text-[14.4px] mt-6 float-right right-0 px-5 pt-5 pb-0 m-0 w-[calc(100%-20px)] block h-[248px] bg-[#F5F5F5]">
-        <p className="font-['Red_Hat_Text'] font-semibold transition-opacity duration-300">
-          Over the past 15 years, we have expanded our portfolio of products across a range of composite, aluminium, uPVC and security products. Our goal was always to offer a complete home improvement solution, which we now carry out nationwide through GFD Homes.
-        </p>
+      <div className="md:hidden">
+      {/* Remove negative margin, use gap or padding instead */}
+      <div className="relative">
         <img 
-          className="md:hidden float-right transition-opacity duration-300 -right-[20px] relative"
-          src="/images/mobile/mobile-3.png"
-          alt="Mobile side image"
+          src="/images/mobile/mobile-2.png" 
+          alt="Mobile bottom image"
+          className="transition-opacity duration-300 relative -left-[22px] w-full h-auto"
         />
-      </div>
-      <div className="md:hidden block clear-both relative ml-auto h-[250px] -top-[70px]"></div>
+      </div> 
+    {/* Use flexbox to prevent overlap */}
+    <div className="bg-[#F5F5F5] px-5 pt-5 pb-5 mt-4">
+      <p className="font-['Red_Hat_Text'] text-[14.4px] font-semibold mb-4">
+        Over the past 15 years, we have expanded our portfolio of products across a range of composite, aluminium, uPVC and security products. Our goal was always to offer a complete home improvement solution, which we now carry out nationwide through GFD Homes.
+      </p>
+      <img 
+        className="ml-auto block"
+        src="/images/mobile/mobile-3.png"
+        alt="Mobile side image"
+      />
+    </div>
+  </div>
     </>
   );
 };
