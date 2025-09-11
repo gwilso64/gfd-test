@@ -152,6 +152,32 @@ const OurTeamSection = () => {
         },
     ];
 
+    const [teams, setTeams] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
+
+    useEffect(() => {
+        const fetchTeams = async () => {
+        try {
+            setLoading(true);
+            const response = await fetch('/api/team-members');
+            
+            if (!response.ok) {
+            throw new Error('Failed to fetch teams');
+            }
+            
+            const data = await response.json();
+            setTeams(data);
+        } catch (err) {
+            setError(err.message);
+        } finally {
+            setLoading(false);
+        }
+        };
+
+        fetchTeams();
+    }, []);
+
     const totalSlides = teamMembers.length / 5;
 
     // For selecting our team member that triggers popup
