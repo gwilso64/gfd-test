@@ -46,7 +46,8 @@ const OurTeamSection = () => {
     if (error) return <div>Error: {error}</div>;
 
     // calulate slides
-    const totalSlides = Math.max(1, Math.ceil(teams.length / 5));
+    const totalSlides = Math.max(1, Math.ceil(teams.length / 15));
+    const mobileSlide = Math.max(1, Math.ceil(teams.length / 6));
 
     // For selecting our team member that triggers popup
     const handleTeamMemberClick = (member) => {
@@ -64,36 +65,40 @@ const OurTeamSection = () => {
 
     // next arrow button
     const nextSlide = () => {
-        setCurrentSlide((prev) => (prev + 1) % totalSlides);
+        const maxSlides = window.innerWidth < 768 ? mobileSlide : totalSlides;
+        setCurrentSlide((prev) => (prev + 1) % maxSlides);
     };
 
-    // prev arrow button
     const prevSlide = () => {
-        setCurrentSlide((prev) => (prev - 1 + totalSlides) % totalSlides);
+        const maxSlides = window.innerWidth < 768 ? mobileSlide : totalSlides;
+        setCurrentSlide((prev) => (prev - 1 + maxSlides) % maxSlides);
     };
 
     // template for each team member to build the jsx
+    // Added !member.clickable ? 'hidden sm:hidden' : '' to make sure not clickable items (text) are not visible on mobile
     const renderTeamMember = (member) => {
         return (
-            <div 
-                key={member.id}
-                className="overflow-hidden cursor-pointer hover:shadow-lg transition-shadow duration-200"
-                onClick={() => handleTeamMemberClick(member)}
-            >
-                <img 
-                    src={member.image}
-                    alt={member.name}
-                    className="w-full h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-300"
-                    onMouseEnter={(e) => {
-                        if (member.hover) {
-                            e.target.src = member.hover;
-                        }
-                    }}
-                    onMouseLeave={(e) => {
-                        e.target.src = member.image;
-                    }}
-                />
-            </div>
+        <div 
+            key={member.id}
+            className={`overflow-hidden md:block cursor-pointer hover:shadow-lg transition-shadow duration-200 ${
+                !member.clickable ? 'hidden sm:hidden' : ''
+            }`}
+            onClick={() => handleTeamMemberClick(member)}
+        >
+        <img 
+            src={member.image}
+            alt={member.name}
+            className="w-full h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-300"
+            onMouseEnter={(e) => {
+                if (member.hover) {
+                    e.target.src = member.hover;
+                }
+            }}
+            onMouseLeave={(e) => {
+                e.target.src = member.image;
+            }}
+        />
+        </div>
         );
     };
 
@@ -170,7 +175,6 @@ const OurTeamSection = () => {
                             </div>
 
                             <div className="w-full">
-                        
                                 {selectedMember.title && (
                                     <div className="flex justify-between items-center text-black pr-6 mb-2 border-black border-b ml-1">
                                         <p className="text-lg ">{selectedMember.title}</p>
@@ -217,25 +221,39 @@ const OurTeamSection = () => {
                     </button>
                 </div>
             </div>
-            {/* overflow hidden so we do not see the next slide */}
+            {/* overflow hidden so we do not see the next slide - Desktop slider */}
             <div className="relative overflow-hidden">
-                {/* added some styling for smoother transtion */}
                 <div 
                     className="flex transition-transform duration-500 ease-in-out"
                     style={{ transform: `translateX(-${currentSlide * 100}%)` }}
                 >
-                    {/* Loop each page of slides, shrink on smaller screen, use renderTeamMember to display member's image */}
-                    {[...Array(totalSlides)].map((_, slideIndex) => (
-                        <div key={slideIndex} className="w-full flex-shrink-0">
-                            {/* 5 cols in each slide, 4 spacing */}
-                            <div className="grid grid-cols-2 md:grid-cols-5 gap-2 md:gap-4">
-                                {teams.map((member) => renderTeamMember({
-                                    ...member,
-                                    id: `${slideIndex}-${member.id}` // make sure we have a unique id for each item
-                                }))}
+                    {/* Desktop slides (15 items each in 3 rows of 5) */}
+                    <div className="hidden md:flex">
+                        {[...Array(totalSlides)].map((_, slideIndex) => (
+                            <div key={slideIndex} className="w-full flex-shrink-0">
+                                <div className="grid grid-cols-5 grid-rows-3 gap-4">
+                                    {teams
+                                        .slice(slideIndex * 15, slideIndex * 15 + 15)
+                                        .map((member) => renderTeamMember(member))
+                                    }
+                                </div>
                             </div>
-                        </div>
-                    ))}
+                        ))}
+                    </div>
+
+                    {/* Mobile slides (6 items each) */}
+                    <div className="md:hidden flex">
+                        {[...Array(mobileSlide)].map((_, slideIndex) => (
+                            <div key={slideIndex} className="w-full flex-shrink-0">
+                                <div className="grid grid-cols-2 gap-2">
+                                    {teams
+                                        .slice(slideIndex * 6, slideIndex * 6 + 6)
+                                        .map((member) => renderTeamMember(member))
+                                    }
+                                </div>
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </div>
             {/* Popup Modal */}
