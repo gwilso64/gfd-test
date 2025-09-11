@@ -1,4 +1,5 @@
 import React, { useState,useEffect } from 'react';
+import TeamMemberPopup from '../Components/OurTeamSection/TeamMemberPopup';
 
 const OurTeamSection = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
@@ -47,7 +48,11 @@ const OurTeamSection = () => {
 
     // calulate slides
     const totalSlides = Math.max(1, Math.ceil(teams.length / 15));
-    const mobileSlide = Math.max(1, Math.ceil(teams.length / 6));
+    // Because letters are not viewable on mobille I will remove them
+    const clickableTeams = teams.filter(member => member.clickable === true);
+    // Update the count for team without letters
+    const clickableCount = teams.filter(member => member.clickable === true).length;
+    const mobileSlide = Math.max(1, Math.ceil(clickableCount / 6)); // 6 clickable items per mobile slide
 
     // For selecting our team member that triggers popup
     const handleTeamMemberClick = (member) => {
@@ -121,74 +126,11 @@ const OurTeamSection = () => {
         } else {
             newIndex = currentIndex > 0 ? currentIndex - 1 : teams.length - 1;
         }
-        
+        // Skip over non clickable items
+        if (teams[newIndex].clickable===false) {
+            newIndex = newIndex+1;
+        }
         setSelectedMember(teams[newIndex]);
-    };
-
-    const TeamMemberPopup = () => {
-        if (!isPopupOpen || !selectedMember) return null;
-        // Popup item with slider
-        return (
-            <div className="fixed inset-0 bg-black flex items-center justify-center z-50 p-4">
-                <div className="bg-white max-w-[327px] w-full max-h-[90vh] overflow-y-auto">
-
-                    <div className="flex justify-between items-center text-black pr-6 pt-6 border-black border-b ml-6">
-                        <h3 className="text-xl"><strong>Meet</strong>, {selectedMember.name}</h3>
-                        <button 
-                            onClick={closePopup}
-                            className="hover:text-gray-700 transition-colors"
-                        >
-                            <svg className="w-6 h-6  -top-2.5 -right-2.5 relative" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                            </svg>
-                        </button>
-                    </div>
-                    
-                    <div className="pl-6 pt-4 pr-6 pb-6">
-                        <div className="pb-4 flex justify-start gap-2">
-                            <button 
-                                onClick={() => navigateTeamMember('prev')}
-                                className="w-5 h-5 bg-black text-white rounded-full hover:bg-gray-800 flex items-center justify-center transition-colors duration-200"
-                                aria-label="Previous slide"
-                            >
-                                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                                </svg>
-                            </button>
-                            <button 
-                                onClick={() => navigateTeamMember('next')}
-                                className="w-5 h-5 bg-black text-white rounded-full hover:bg-gray-800 flex items-center justify-center transition-colors duration-200"
-                                aria-label="Next slide"
-                            >
-                                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                                </svg>
-                            </button>
-                        </div>
-                        <div className="flex flex-col gap-6">
-                            <div className="w-full">
-                                <img 
-                                    src={selectedMember.selected}
-                                    alt={selectedMember.name}
-                                    className="m-auto object-center"
-                                />
-                            </div>
-
-                            <div className="w-full">
-                                {selectedMember.title && (
-                                    <div className="flex justify-between items-center text-black pr-6 mb-2 border-black border-b ml-1">
-                                        <p className="text-lg ">{selectedMember.title}</p>
-                                    </div>
-                                )}
-                                {selectedMember.description && (
-                                    <p className="mb-4">{selectedMember.description}</p>
-                                )}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        );
     };
 
     return (
@@ -240,13 +182,12 @@ const OurTeamSection = () => {
                             </div>
                         ))}
                     </div>
-
                     {/* Mobile slides (6 items each) */}
                     <div className="md:hidden flex">
                         {[...Array(mobileSlide)].map((_, slideIndex) => (
                             <div key={slideIndex} className="w-full flex-shrink-0">
                                 <div className="grid grid-cols-2 gap-2">
-                                    {teams
+                                    {clickableTeams
                                         .slice(slideIndex * 6, slideIndex * 6 + 6)
                                         .map((member) => renderTeamMember(member))
                                     }
@@ -256,10 +197,30 @@ const OurTeamSection = () => {
                     </div>
                 </div>
             </div>
+            {/* Mobile Page Dots */}
+            <div className="md:hidden flex justify-start gap-1.5 mt-4">
+                {[...Array(mobileSlide)].map((_, index) => (
+                    <button
+                        key={index}
+                        onClick={() => setCurrentSlide(index)}
+                        className={`w-2 h-2 rounded-full transition-all duration-200 ${
+                            currentSlide === index 
+                                ? 'bg-black w-6' 
+                                : 'bg-gray-400 hover:bg-gray-600'
+                        }`}
+                        aria-label={`Go to slide ${index + 1}`}
+                    />
+                ))}
+            </div>
             {/* Popup Modal */}
-            <TeamMemberPopup />
+            <TeamMemberPopup 
+                isOpen={isPopupOpen}
+                member={selectedMember}
+                onClose={closePopup}
+                onNavigate={navigateTeamMember}
+            />
+
         </div>
     );
 }
-
 export default OurTeamSection;
