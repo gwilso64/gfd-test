@@ -34983,130 +34983,7 @@ var OurTeamSection = function OurTeamSection() {
   // clickable is this a clickable item or a letter
   // selected image for selected user, I have added a placeholder for team members that do not have a photo (https://placehold.co/200x250)
   // hover is for hover state image
-  var teamMembers = [{
-    id: 1,
-    clickable: true,
-    image: '/images/team/team-member-1.png',
-    name: 'Team Member 1',
-    selected: '/images/team/selected/team-member-1s.png',
-    hover: '/images/team/hover/team-member-1h.png',
-    title: 'Job Title',
-    description: "Our aim is to offer the industry's best quality products at a competitive price, direct to homeowners. More and more customers are now looking for the most cost-effective way to get the same quality products at a fraction of the high street price, and we are happy to advise and liaise with your builders, fitters or project managers throughout your order. For customers who want the full survey and installation service, we truly believe we offer the best package in the business. Our nationwide installation service is unrivalled by any other online company - click here to read more."
-  }, {
-    id: 2,
-    clickable: false,
-    image: '/images/team/team-g.png',
-    name: 'Team Member G',
-    title: 'Job Title',
-    description: "Our aim is to offer the industry's best quality products at a competitive price, direct to homeowners. More and more customers are now looking for the most cost-effective way to get the same quality products at a fraction of the high street price, and we are happy to advise and liaise with your builders, fitters or project managers throughout your order. For customers who want the full survey and installation service, we truly believe we offer the best package in the business. Our nationwide installation service is unrivalled by any other online company - click here to read more."
-  }, {
-    id: 3,
-    clickable: true,
-    image: '/images/team/team-member-2.png',
-    name: 'Team Member 2',
-    selected: 'https://placehold.co/200x250',
-    title: 'Job Title',
-    description: "Our aim is to offer the industry's best quality products at a competitive price, direct to homeowners. More and more customers are now looking for the most cost-effective way to get the same quality products at a fraction of the high street price, and we are happy to advise and liaise with your builders, fitters or project managers throughout your order. For customers who want the full survey and installation service, we truly believe we offer the best package in the business. Our nationwide installation service is unrivalled by any other online company - click here to read more."
-  }, {
-    id: 4,
-    clickable: true,
-    image: '/images/team/team-member-1.png',
-    name: 'Team Member 1',
-    selected: '/images/team/selected/team-member-1s.png',
-    hover: '/images/team/hover/team-member-1h.png',
-    title: 'Job Title',
-    description: "Our aim is to offer the industry's best quality products at a competitive price, direct to homeowners. More and more customers are now looking for the most cost-effective way to get the same quality products at a fraction of the high street price, and we are happy to advise and liaise with your builders, fitters or project managers throughout your order. For customers who want the full survey and installation service, we truly believe we offer the best package in the business. Our nationwide installation service is unrivalled by any other online company - click here to read more."
-  }, {
-    id: 5,
-    clickable: true,
-    image: '/images/team/team-member-2.png',
-    name: 'Team Member 2',
-    selected: 'https://placehold.co/200x250',
-    title: 'Job Title',
-    description: "Our aim is to offer the industry's best quality products at a competitive price, direct to homeowners. More and more customers are now looking for the most cost-effective way to get the same quality products at a fraction of the high street price, and we are happy to advise and liaise with your builders, fitters or project managers throughout your order. For customers who want the full survey and installation service, we truly believe we offer the best package in the business. Our nationwide installation service is unrivalled by any other online company - click here to read more."
-  }, {
-    id: 6,
-    clickable: true,
-    image: '/images/team/team-member-1.png',
-    name: 'Team Member 1',
-    selected: '/images/team/selected/team-member-1s.png',
-    hover: '/images/team/hover/team-member-1h.png',
-    title: 'Job Title',
-    description: "Our aim is to offer the industry's best quality products at a competitive price, direct to homeowners. More and more customers are now looking for the most cost-effective way to get the same quality products at a fraction of the high street price, and we are happy to advise and liaise with your builders, fitters or project managers throughout your order. For customers who want the full survey and installation service, we truly believe we offer the best package in the business. Our nationwide installation service is unrivalled by any other online company - click here to read more."
-  }, {
-    id: 7,
-    clickable: true,
-    image: '/images/team/team-member-2.png',
-    name: 'Team Member 2',
-    selected: 'https://placehold.co/200x250',
-    title: 'Job Title',
-    description: "Our aim is to offer the industry's best quality products at a competitive price, direct to homeowners. More and more customers are now looking for the most cost-effective way to get the same quality products at a fraction of the high street price, and we are happy to advise and liaise with your builders, fitters or project managers throughout your order. For customers who want the full survey and installation service, we truly believe we offer the best package in the business. Our nationwide installation service is unrivalled by any other online company - click here to read more."
-  }, {
-    id: 8,
-    clickable: false,
-    image: '/images/team/team-f.png',
-    name: 'Team Member F',
-    title: 'Job Title',
-    description: "Our aim is to offer the industry's best quality products at a competitive price, direct to homeowners. More and more customers are now looking for the most cost-effective way to get the same quality products at a fraction of the high street price, and we are happy to advise and liaise with your builders, fitters or project managers throughout your order. For customers who want the full survey and installation service, we truly believe we offer the best package in the business. Our nationwide installation service is unrivalled by any other online company - click here to read more."
-  }, {
-    id: 9,
-    clickable: true,
-    image: '/images/team/team-member-1.png',
-    name: 'Team Member 1',
-    selected: '/images/team/selected/team-member-1s.png',
-    hover: '/images/team/hover/team-member-1h.png',
-    title: 'Job Title',
-    description: "Our aim is to offer the industry's best quality products at a competitive price, direct to homeowners. More and more customers are now looking for the most cost-effective way to get the same quality products at a fraction of the high street price, and we are happy to advise and liaise with your builders, fitters or project managers throughout your order. For customers who want the full survey and installation service, we truly believe we offer the best package in the business. Our nationwide installation service is unrivalled by any other online company - click here to read more."
-  }, {
-    id: 10,
-    clickable: true,
-    image: '/images/team/team-member-2.png',
-    name: 'Team Member 2',
-    selected: 'https://placehold.co/200x250',
-    title: 'Job Title',
-    description: "Our aim is to offer the industry's best quality products at a competitive price, direct to homeowners. More and more customers are now looking for the most cost-effective way to get the same quality products at a fraction of the high street price, and we are happy to advise and liaise with your builders, fitters or project managers throughout your order. For customers who want the full survey and installation service, we truly believe we offer the best package in the business. Our nationwide installation service is unrivalled by any other online company - click here to read more."
-  }, {
-    id: 11,
-    clickable: true,
-    image: '/images/team/team-member-1.png',
-    name: 'Team Member 1',
-    selected: '/images/team/selected/team-member-1s.png',
-    hover: '/images/team/hover/team-member-1h.png',
-    title: 'Job Title',
-    description: "Our aim is to offer the industry's best quality products at a competitive price, direct to homeowners. More and more customers are now looking for the most cost-effective way to get the same quality products at a fraction of the high street price, and we are happy to advise and liaise with your builders, fitters or project managers throughout your order. For customers who want the full survey and installation service, we truly believe we offer the best package in the business. Our nationwide installation service is unrivalled by any other online company - click here to read more."
-  }, {
-    id: 12,
-    clickable: true,
-    image: '/images/team/team-member-2.png',
-    name: 'Team Member 2',
-    selected: 'https://placehold.co/200x250',
-    title: 'Job Title',
-    description: "Our aim is to offer the industry's best quality products at a competitive price, direct to homeowners. More and more customers are now looking for the most cost-effective way to get the same quality products at a fraction of the high street price, and we are happy to advise and liaise with your builders, fitters or project managers throughout your order. For customers who want the full survey and installation service, we truly believe we offer the best package in the business. Our nationwide installation service is unrivalled by any other online company - click here to read more."
-  }, {
-    id: 13,
-    clickable: true,
-    image: '/images/team/team-member-1.png',
-    name: 'Team Member 1',
-    selected: '/images/team/selected/team-member-1s.png',
-    hover: '/images/team/hover/team-member-1h.png',
-    title: 'Job Title',
-    description: "Our aim is to offer the industry's best quality products at a competitive price, direct to homeowners. More and more customers are now looking for the most cost-effective way to get the same quality products at a fraction of the high street price, and we are happy to advise and liaise with your builders, fitters or project managers throughout your order. For customers who want the full survey and installation service, we truly believe we offer the best package in the business. Our nationwide installation service is unrivalled by any other online company - click here to read more."
-  }, {
-    id: 14,
-    clickable: false,
-    image: '/images/team/team-d.png',
-    name: 'Team Member D',
-    title: 'Job Title',
-    description: "Our aim is to offer the industry's best quality products at a competitive price, direct to homeowners. More and more customers are now looking for the most cost-effective way to get the same quality products at a fraction of the high street price, and we are happy to advise and liaise with your builders, fitters or project managers throughout your order. For customers who want the full survey and installation service, we truly believe we offer the best package in the business. Our nationwide installation service is unrivalled by any other online company - click here to read more."
-  }, {
-    id: 15,
-    clickable: true,
-    image: '/images/team/team-member-2.png',
-    name: 'Team Member 2',
-    selected: 'https://placehold.co/200x250',
-    title: 'Job Title',
-    description: "Our aim is to offer the industry's best quality products at a competitive price, direct to homeowners. More and more customers are now looking for the most cost-effective way to get the same quality products at a fraction of the high street price, and we are happy to advise and liaise with your builders, fitters or project managers throughout your order. For customers who want the full survey and installation service, we truly believe we offer the best package in the business. Our nationwide installation service is unrivalled by any other online company - click here to read more."
-  }];
+
   var _useState7 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([]),
     _useState8 = _slicedToArray(_useState7, 2),
     teams = _useState8[0],
@@ -35119,7 +34996,7 @@ var OurTeamSection = function OurTeamSection() {
     _useState10 = _slicedToArray(_useState1, 2),
     error = _useState10[0],
     setError = _useState10[1];
-  useEffect(function () {
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
     var fetchTeams = /*#__PURE__*/function () {
       var _ref = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee() {
         var response, data, _t;
@@ -35170,7 +35047,7 @@ var OurTeamSection = function OurTeamSection() {
   if (error) return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
     children: ["Error: ", error]
   });
-  var totalSlides = teamMembers.length / 5;
+  var totalSlides = Math.max(1, Math.ceil(teams.length / 5));
 
   // For selecting our team member that triggers popup
   var handleTeamMemberClick = function handleTeamMemberClick(member) {
@@ -35398,7 +35275,7 @@ var OurTeamSection = function OurTeamSection() {
             className: "w-full flex-shrink-0",
             children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
               className: "grid grid-cols-2 md:grid-cols-5 gap-2 md:gap-4",
-              children: teamMembers.map(function (member) {
+              children: teams.map(function (member) {
                 return renderTeamMember(_objectSpread(_objectSpread({}, member), {}, {
                   id: "".concat(slideIndex, "-").concat(member.id) // make sure we have a unique id for each item
                 }));
