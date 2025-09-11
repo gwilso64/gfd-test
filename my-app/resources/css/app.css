@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Or target specific elements */
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+@layer base {
+  html, body {
+    @apply m-0 p-0 h-full;
+  }
+}
+
+@layer components {
+  .text-brand {
+    @apply font-['Red_Hat_Display'] font-medium text-[20px] leading-normal tracking-[1px] align-middle;
+  }
+  
+  .text-brand p {
+    @apply pb-5;
+  }
+.reduce-image {
+      transform-origin: bottom;
+}
+  .main-box {
+    @apply bg-cover bg-center max-w-[892px] w-full font-['Red_Hat_Text'] font-semibold;
+    background-image: url('/images/ourStory/DSI_Solid_Core_Thatched_Cottage.png');
+  }
+
+  @media (max-width: 768px) {
+  .main-box {
+    height:598px;
+    background-image: url('/images/mobile/DSI_Solid_Core_Thatched_Cottageb.png');
+  }
+}
+
+  .story-content-wrapper {
+    @apply max-w-[720px] w-full mx-auto;
+  }
+
+  .story-text-container {
+    @apply max-w-[720px] w-full text-lg leading-normal;
+  }
+  
+  .story-text-container h2 {
+    @apply text-[45px] font-bold;
+  }
+
+  .story-text-container p {
+    @apply tracking-[1px];
+  }
+
+  .responsive-image {
+    @apply float-left absolute transition-[width] duration-300 ease-in-out;
+  }
+}
+
+.right-bottom {
+    position:relative;
+    left: 220px
+}
+
+body
+.bottom-images {
+    position: absolute;
+    left: -20px;
+    right: 0px;
+    bottom: 0px;
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+    z-index: 444;
+}
+

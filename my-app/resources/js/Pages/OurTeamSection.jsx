@@ -16,6 +16,7 @@ const OurTeamSection = () => {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
+    // useEffect runs onload and calls fetchTeams to get the team member data
     useEffect(() => {
         const fetchTeams = async () => {
         try {
@@ -27,6 +28,7 @@ const OurTeamSection = () => {
             }
             
             const data = await response.json();
+            // we use set state to store the teams data
             setTeams(data);
         } catch (err) {
             setError(err.message);
@@ -38,10 +40,13 @@ const OurTeamSection = () => {
         fetchTeams();
     }, []);
 
+    // when loading display simple loading message
     if (loading) return <div>Loading...</div>;
+    // when loading display simple error message (message comes from backend)
     if (error) return <div>Error: {error}</div>;
 
-const totalSlides = Math.max(1, Math.ceil(teams.length / 5));
+    // calulate slides
+    const totalSlides = Math.max(1, Math.ceil(teams.length / 5));
 
     // For selecting our team member that triggers popup
     const handleTeamMemberClick = (member) => {
@@ -51,7 +56,7 @@ const totalSlides = Math.max(1, Math.ceil(teams.length / 5));
         }
     };
 
-    // colose popup
+    // close popup
     const closePopup = () => {
         setIsPopupOpen(false);
         setSelectedMember(null);

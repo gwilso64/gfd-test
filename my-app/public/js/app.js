@@ -34828,7 +34828,7 @@ var CompanyValuesSection = function CompanyValuesSection() {
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
             className: "w-full sm:bg-[#F5F5F5]",
             children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h2", {
-              className: "pl-8 pr-8 text-[20px] leading-normal font-bold text-black sm:col-span-1 md:col-span-full sm:relative md:static sm:top-4 md:top-0 sm:w-1/2 md:w-auto sm:text-[50px] md:text-[20px] sm:max-w-[350px] md:max-w-none",
+              className: "pl-8 pr-8 text-[20px] leading-normal font-bold text-black sm:col-span-1 md:col-span-full sm:relative md:static sm:top-4 md:top-0 sm:w-1/2 md:w-auto sm:text-[50px] md:text-[50px] md:pb-4 sm:max-w-[350px] md:max-w-none",
               children: "Company Values & Ethos"
             })
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
@@ -34839,17 +34839,18 @@ var CompanyValuesSection = function CompanyValuesSection() {
             src: "/images/companyValues/thatched-cottage.png"
           })]
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+          className: "float-right",
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
-            className: "pb-6 hidden sm:block",
+            className: "pb-6 hidden sm:block ml-auto",
             src: "/images/companyValues/property-slice-1.png"
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
-            className: "pb-16 hidden sm:block",
+            className: "pb-16 hidden sm:block ml-auto",
             src: "/images/companyValues/property-slice-2.png"
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
             className: "pb-8 sm:hidden",
             src: "/images/mobile/mobile-4.png"
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-            className: "hidden sm:block text-brand",
+            className: "hidden sm:block text-brand pr-5 max-w-[932px] w-full ml-auto",
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
               children: "We know that our continued success is down to our customers, and treating them with respect. Starting from humble beginnings means that we value each and every customer equally, regardless of the order size."
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
@@ -34897,31 +34898,74 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var OurStorySection = function OurStorySection() {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-    className: "bg-white min-h-screen p-4",
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-      className: "max-w-4xl mx-auto",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-        className: "bg-white p-8",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h2", {
-          className: "text-2xl font-bold mb-4 pb-6 border-b-2",
-          children: "Our Story"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
-          className: "mb-4",
-          children: "Coming from a lifelong background in the double glazing industry, we began trading online in 2008. Our core product offering was composite doors, and we were one of the first companies in the UK to pioneer online ordering for this product."
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
-          className: "mb-4",
-          children: "Over the past 15 years, we have expanded our portfolio of products across a range of composite, aluminium, uPVC and security products. Our goal was always to offer a complete home improvement solution, which we now carry out nationwide through GFD Homes."
-        })]
+  // NOTES
+
+  /** 
+   * Image Placement:
+   * 
+   *    The images on the bottom placement was a little off due to the screen size. I think a scrollbar would be usful here so large
+   *    descriptions do not cause images to overlap
+     * Backgorund:  
+   * 
+   * My approach for the background is to provide a gradiant to create the black and white, the images can then be placed on top.
+   * The thatched house background needs to be center to the content, so this needs to be a background for the main content.
+   */
+
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.Fragment, {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
+      className: "hidden md:block z-[2] responsive-image",
+      src: "images/ourStory/door-side-bar.png",
+      alt: "Sidebar"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+      className: "main-block relative bg-white md:bg-gradient-to-l md:from-black md:via-black md:to-white md:from-0% md:via-65% md:to-65% min-h-[calc(100vh-15px)] flex items-start md:pt-4 px-4",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+        className: "relative max-w-4xl w-full",
+        style: {
+          margin: '0px auto'
+        },
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+          className: "text-content main-box relative flex justify-center lg:pl-12 pr-12 pb-24 pt-12 bg-cover bg-center sm:pl-6 bg-no-repeat",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+            className: "relative text-content",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+              className: "bg-white pl-4 pt-4 pr-8 w-full max-w-4xl z-10 relative flex",
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+                className: "lg:w-4/5 pr-6 bg-white p-8",
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+                  className: "story-text-container",
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h2", {
+                    className: "text-2xl font-bold text-gray-800 mb-4 pb-6 border-b-2 border-gray-800",
+                    children: "Our Story"
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
+                    className: "mb-4",
+                    children: "Coming from a lifelong background in the double glazing industry, we began trading online in 2008. Our core product offering was composite doors, and we were one of the first companies in the UK to pioneer online ordering for this product."
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
+                    className: "mb-4",
+                    children: "Over the past 15 years, we have expanded our portfolio of products across a range of composite, aluminium, uPVC and security products. Our goal was always to offer a complete home improvement solution, which we now carry out nationwide through GFD Homes."
+                  })]
+                })
+              })
+            })
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
+            src: "/images/ourStory/main.png",
+            alt: "Desktop main image",
+            width: "433",
+            height: "245",
+            style: {
+              left: "655px"
+            },
+            className: "max-w-[433px] top-10 object-cover p-2 z-50 absolute transform origin-left responsive-abs-image hidden lg:block"
+          })]
+        })
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-        className: "mt-8",
+        className: "bottom-images w-full sm:w-3/4 md:w-2/3 lg:w-1/2 mx-auto hidden lg:block",
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
-          src: "/images/ourStory/main.png",
-          alt: "Desktop main image",
-          className: "w-full max-w-md mx-auto"
+          className: "left-bottom w-full object-contain",
+          src: "/images/ourStory/bottom-images.png",
+          alt: "Left bottom image"
         })
       })]
-    })
+    })]
   });
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (OurStorySection);
@@ -34996,6 +35040,8 @@ var OurTeamSection = function OurTeamSection() {
     _useState10 = _slicedToArray(_useState1, 2),
     error = _useState10[0],
     setError = _useState10[1];
+
+  // useEffect runs onload and calls fetchTeams to get the team member data
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
     var fetchTeams = /*#__PURE__*/function () {
       var _ref = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee() {
@@ -35019,6 +35065,7 @@ var OurTeamSection = function OurTeamSection() {
               return response.json();
             case 3:
               data = _context.v;
+              // we use set state to store the teams data
               setTeams(data);
               _context.n = 5;
               break;
@@ -35041,12 +35088,17 @@ var OurTeamSection = function OurTeamSection() {
     }();
     fetchTeams();
   }, []);
+
+  // when loading display simple loading message
   if (loading) return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
     children: "Loading..."
   });
+  // when loading display simple error message (message comes from backend)
   if (error) return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
     children: ["Error: ", error]
   });
+
+  // calulate slides
   var totalSlides = Math.max(1, Math.ceil(teams.length / 5));
 
   // For selecting our team member that triggers popup
@@ -35057,7 +35109,7 @@ var OurTeamSection = function OurTeamSection() {
     }
   };
 
-  // colose popup
+  // close popup
   var closePopup = function closePopup() {
     setIsPopupOpen(false);
     setSelectedMember(null);
