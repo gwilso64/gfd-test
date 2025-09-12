@@ -35046,6 +35046,11 @@ var OurStorySection = function OurStorySection() {
    * 
    * My approach for the background is to provide a gradient to create the black and white, the images can then be placed on top.
    * The thatched house background needs to be center to the content, so this needs to be a background for the main content.
+   * 
+   * Animate:  
+   * 
+   * My approach for the background is to provide a gradient to create the black and white, the images can then be placed on top.
+   * The thatched house background needs to be center to the content, so this needs to be a background for the main content.
    */
 
   // Auto-cycle with fade animation
@@ -35316,28 +35321,88 @@ var OurTeamSection = function OurTeamSection() {
       return (prev - 1 + maxSlides) % maxSlides;
     });
   };
-
-  // template for each team member to build the jsx
-  // Added !member.clickable ? 'hidden sm:hidden' : '' to make sure not clickable items (text) are not visible on mobile
-  var renderTeamMember = function renderTeamMember(member) {
-    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-      className: "overflow-hidden md:block cursor-pointer hover:shadow-lg transition-shadow duration-200 ".concat(!member.clickable ? 'hidden sm:hidden' : ''),
+  var renderTeamTeamMember = function renderTeamTeamMember(member) {
+    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+      className: "overflow-hidden relative md:block cursor-pointer group ".concat(!member.clickable ? 'hidden sm:hidden' : ''),
       onClick: function onClick() {
         return handleTeamMemberClick(member);
       },
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
+      onMouseEnter: function onMouseEnter(e) {
+        var img = e.currentTarget.querySelector('img');
+        if (member.hover && img) {
+          img.src = member.hover;
+        }
+      },
+      onMouseLeave: function onMouseLeave(e) {
+        var img = e.currentTarget.querySelector('img');
+        if (img) {
+          img.src = member.image;
+        }
+      },
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
         src: member.image,
         alt: member.name,
-        className: "w-full h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-300",
-        onMouseEnter: function onMouseEnter(e) {
-          if (member.hover) {
-            e.target.src = member.hover;
-          }
-        },
-        onMouseLeave: function onMouseLeave(e) {
-          e.target.src = member.image;
-        }
-      })
+        className: "w-full h-full object-cover filter"
+      }), member.clickable && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+        className: "absolute inset-0 opacity-0 group-hover:opacity-100 pointer-events-none",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+          className: "absolute top-0 left-0 right-0 bg-black text-white p-2 text-left text-sm",
+          children: member.title || 'Team Member'
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+          className: "absolute bottom-0 left-0 right-0 bg-black text-white p-2 flex items-right justify-right gap-2 text-sm pointer-events-auto",
+          onClick: function onClick(e) {
+            e.stopPropagation();
+            handleTeamMemberClick(member);
+          },
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("span", {
+            className: "ml-auto -top-[2px] relative",
+            children: "View Profile"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
+            src: "images/team/profile-icon.png",
+            alt: "Profile icon",
+            className: "w-4 h-4"
+          })]
+        })]
+      })]
+    }, member.id);
+  };
+  // template for each team member to build the jsx
+  // Added !member.clickable ? 'hidden sm:hidden' : '' to make sure not clickable items (text) are not visible on mobile
+  var renderTeamMember = function renderTeamMember(member) {
+    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+      className: "overflow-hidden relative md:block cursor-pointer hover:shadow-lg transition-shadow duration-200 group ".concat(!member.clickable ? 'hidden sm:hidden' : ''),
+      onClick: function onClick() {
+        return handleTeamMemberClick(member);
+      },
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
+        src: member.image,
+        alt: member.name,
+        className: "w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-300"
+      }), member.hover && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
+        src: member.hover,
+        alt: member.name,
+        className: "absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-all duration-300"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+        className: "absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+          className: "absolute top-0 left-0 right-0 bg-black text-white p-2 text-center text-sm",
+          children: member.role || 'Team Member'
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+          className: "absolute bottom-8 left-1/2 transform -translate-x-1/2",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
+            src: "/images/team/profile/profile-1.png",
+            alt: "Profile icon",
+            className: "w-8 h-8"
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+          className: "absolute bottom-0 left-0 right-0 bg-black text-white p-2 text-center text-sm pointer-events-auto hover:bg-gray-800 transition-colors",
+          onClick: function onClick(e) {
+            e.stopPropagation();
+            handleTeamMemberClick(member);
+          },
+          children: "View Profile"
+        })]
+      })]
     }, member.id);
   };
 
@@ -35460,7 +35525,7 @@ var OurTeamSection = function OurTeamSection() {
               children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
                 className: "grid grid-cols-5 grid-rows-3 gap-4",
                 children: teams.slice(slideIndex * 15, slideIndex * 15 + 15).map(function (member) {
-                  return renderTeamMember(member);
+                  return renderTeamTeamMember(member);
                 })
               })
             }, slideIndex);
@@ -35577,7 +35642,7 @@ var locations = [{
   },
   content: {
     mainText: ["Coming from a lifelong background in the double glazing industry, we began trading online in 2008. Our core product offering was composite doors, and we were one of the first companies in the UK to pioneer online ordering for this product.", "Over the past 15 years, we have expanded our portfolio of products across a range of composite, aluminium, uPVC and security products. Our goal was always to offer a complete home improvement solution, which we now carry out nationwide through GFD Homes."],
-    mobileText: "Over the past 15 years, we have expanded our portfolio of products across a range of composite, aluminium, uPVC and security products."
+    mobileText: "Over the past 15 years, we have expanded our portfolio of products across a range of composite, aluminium, uPVC and security products. Our goal was always to offer a complete home improvement solution, which we now carry out nationwide through GFD Homes."
   }
 }, {
   id: 2,

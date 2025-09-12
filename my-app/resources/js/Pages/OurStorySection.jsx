@@ -17,6 +17,11 @@ const OurStorySection = () => {
    * 
    * My approach for the background is to provide a gradient to create the black and white, the images can then be placed on top.
    * The thatched house background needs to be center to the content, so this needs to be a background for the main content.
+   * 
+   * Animate:  
+   * 
+   * My approach for the background is to provide a gradient to create the black and white, the images can then be placed on top.
+   * The thatched house background needs to be center to the content, so this needs to be a background for the main content.
    */
 
   // Auto-cycle with fade animation

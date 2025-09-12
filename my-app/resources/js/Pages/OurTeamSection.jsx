@@ -79,33 +79,115 @@ const OurTeamSection = () => {
         setCurrentSlide((prev) => (prev - 1 + maxSlides) % maxSlides);
     };
 
-    // template for each team member to build the jsx
-    // Added !member.clickable ? 'hidden sm:hidden' : '' to make sure not clickable items (text) are not visible on mobile
-    const renderTeamMember = (member) => {
-        return (
+const renderTeamOverlayMember = (member) => {
+
+    return (
         <div 
             key={member.id}
-            className={`overflow-hidden md:block cursor-pointer hover:shadow-lg transition-shadow duration-200 ${
+            className={`overflow-hidden relative md:block cursor-pointer group ${
+                !member.clickable ? 'hidden sm:hidden' : ''
+            }`}
+            onClick={() => handleTeamMemberClick(member)}
+            onMouseEnter={(e) => {
+                const img = e.currentTarget.querySelector('img');
+                if (member.hover && img) {
+                    img.src = member.hover;
+                }
+            }}
+            onMouseLeave={(e) => {
+                const img = e.currentTarget.querySelector('img');
+                if (img) {
+                    img.src = member.image;
+                }
+            }}
+        >
+            <img 
+                src={member.image}
+                alt={member.name}
+                className="w-full h-full object-cover filter"
+            />
+         {/* Hover Overlay Content - Only visible on hover */}
+        {member.clickable && (
+            <div className="absolute inset-0 opacity-0 group-hover:opacity-100 pointer-events-none">
+            {/* Role Name at Top */}
+            <div className="absolute top-0 left-0 right-0 bg-black text-white p-2 text-left text-sm">
+                {member.title || 'Team Member'}
+            </div>
+            <div 
+                className="absolute bottom-0 left-0 right-0 bg-black text-white p-2 flex items-right justify-right gap-2 text-sm pointer-events-auto"
+                onClick={(e) => {
+                    e.stopPropagation();
+                    handleTeamMemberClick(member);
+                }}
+            >
+                <span className="ml-auto -top-[2px] relative">View Profile</span>
+                <img 
+                    src="images/team/profile-icon.png" 
+                    alt="Profile icon"
+                    className="w-4 h-4"
+                />
+            </div>
+            </div>
+        )}
+        </div>
+    );
+};
+    // template for each team member to build the jsx
+ // Added !member.clickable ? 'hidden sm:hidden' : '' to make sure not clickable items (text) are not visible on mobile
+const renderTeamMember = (member) => {
+    return (
+        <div 
+            key={member.id}
+            className={`overflow-hidden relative md:block cursor-pointer hover:shadow-lg transition-shadow duration-200 group ${
                 !member.clickable ? 'hidden sm:hidden' : ''
             }`}
             onClick={() => handleTeamMemberClick(member)}
         >
-        <img 
-            src={member.image}
-            alt={member.name}
-            className="w-full h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-300"
-            onMouseEnter={(e) => {
-                if (member.hover) {
-                    e.target.src = member.hover;
-                }
-            }}
-            onMouseLeave={(e) => {
-                e.target.src = member.image;
-            }}
-        />
+            <img 
+                src={member.image}
+                alt={member.name}
+                className="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-300"
+            />
+            
+            {/* Show hover image on group hover */}
+            {member.hover && (
+                <img 
+                    src={member.hover}
+                    alt={member.name}
+                    className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-all duration-300"
+                />
+            )}
+            
+            {/* Hover Overlay Content - Only visible on hover */}
+            <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                {/* Role Name at Top */}
+                <div className="absolute top-0 left-0 right-0 bg-black text-white p-2 text-center text-sm">
+                    {member.role || 'Team Member'}
+                </div>
+                
+                {/* Profile Icon above View Profile */}
+                <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
+                    <img 
+                        src="/images/team/profile/profile-1.png" 
+                        alt="Profile icon"
+                        className="w-8 h-8"
+                    />
+                </div>
+                
+                {/* View Profile at Bottom */}
+                <div 
+                    className="absolute bottom-0 left-0 right-0 bg-black text-white p-2 text-center text-sm pointer-events-auto hover:bg-gray-800 transition-colors"
+                    onClick={(e) => {
+                        e.stopPropagation();
+                        handleTeamMemberClick(member);
+                    }}
+                >
+                    View Profile
+                </div>
+            </div>
         </div>
-        );
-    };
+    );
+};
 
     // Navigation functions for popup
     const navigateTeamMember = (direction) => {
@@ -197,7 +279,7 @@ const OurTeamSection = () => {
                                 <div className="grid grid-cols-5 grid-rows-3 gap-4">
                                     {teams
                                         .slice(slideIndex * 15, slideIndex * 15 + 15)
-                                        .map((member) => renderTeamMember(member))
+                                        .map((member) => renderTeamOverlayMember(member))
                                     }
                                 </div>
                             </div>

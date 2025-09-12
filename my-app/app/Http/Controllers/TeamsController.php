@@ -15,7 +15,7 @@ class TeamsController extends Controller
             'image' => '/images/team/team-member-1.png',
             'name' => 'Team Member 1',
             'selected' => '/images/team/selected/team-member-1s.png',
-            'hover' => '/images/team/hover/team-member-1h.png',
+            'hover' => '/images/team/profile/profile-1.png',
             'title' => 'Job Title',
             'description' => "Our aim is to offer the industry's best quality products at a competitive price, direct to homeowners. More and more customers are now looking for the most cost-effective way to get the same quality products at a fraction of the high street price, and we are happy to advise and liaise with your builders, fitters or project managers throughout your order. For customers who want the full survey and installation service, we truly believe we offer the best package in the business. Our nationwide installation service is unrivalled by any other online company - click here to read more."
         ],
@@ -42,7 +42,7 @@ class TeamsController extends Controller
             'image' => '/images/team/team-member-1.png',
             'name' => 'Team Member 1',
             'selected' => '/images/team/selected/team-member-1s.png',
-            'hover' => '/images/team/hover/team-member-1h.png',
+            'hover' => '/images/team/profile/profile-1.png',
             'title' => 'Job Title',
             'description' => "Our aim is to offer the industry's best quality products at a competitive price, direct to homeowners. More and more customers are now looking for the most cost-effective way to get the same quality products at a fraction of the high street price, and we are happy to advise and liaise with your builders, fitters or project managers throughout your order. For customers who want the full survey and installation service, we truly believe we offer the best package in the business. Our nationwide installation service is unrivalled by any other online company - click here to read more."
         ],
@@ -61,7 +61,7 @@ class TeamsController extends Controller
             'image' => '/images/team/team-member-1.png',
             'name' => 'Team Member 1',
             'selected' => '/images/team/selected/team-member-1s.png',
-            'hover' => '/images/team/hover/team-member-1h.png',
+            'hover' => '/images/team/profile/profile-1.png',
             'title' => 'Job Title',
             'description' => "Our aim is to offer the industry's best quality products at a competitive price, direct to homeowners. More and more customers are now looking for the most cost-effective way to get the same quality products at a fraction of the high street price, and we are happy to advise and liaise with your builders, fitters or project managers throughout your order. For customers who want the full survey and installation service, we truly believe we offer the best package in the business. Our nationwide installation service is unrivalled by any other online company - click here to read more."
         ],
@@ -88,7 +88,7 @@ class TeamsController extends Controller
             'image' => '/images/team/team-member-1.png',
             'name' => 'Team Member 1',
             'selected' => '/images/team/selected/team-member-1s.png',
-            'hover' => '/images/team/hover/team-member-1h.png',
+            'hover' => '/images/team/profile/profile-1.png',
             'title' => 'Job Title',
             'description' => "Our aim is to offer the industry's best quality products at a competitive price, direct to homeowners. More and more customers are now looking for the most cost-effective way to get the same quality products at a fraction of the high street price, and we are happy to advise and liaise with your builders, fitters or project managers throughout your order. For customers who want the full survey and installation service, we truly believe we offer the best package in the business. Our nationwide installation service is unrivalled by any other online company - click here to read more."
         ],
@@ -107,7 +107,7 @@ class TeamsController extends Controller
             'image' => '/images/team/team-member-1.png',
             'name' => 'Team Member 1',
             'selected' => '/images/team/selected/team-member-1s.png',
-            'hover' => '/images/team/hover/team-member-1h.png',
+            'hover' => '/images/team/profile/profile-1.png',
             'title' => 'Job Title',
             'description' => "Our aim is to offer the industry's best quality products at a competitive price, direct to homeowners. More and more customers are now looking for the most cost-effective way to get the same quality products at a fraction of the high street price, and we are happy to advise and liaise with your builders, fitters or project managers throughout your order. For customers who want the full survey and installation service, we truly believe we offer the best package in the business. Our nationwide installation service is unrivalled by any other online company - click here to read more."
         ],
@@ -126,7 +126,7 @@ class TeamsController extends Controller
             'image' => '/images/team/team-member-1.png',
             'name' => 'Team Member 1',
             'selected' => '/images/team/selected/team-member-1s.png',
-            'hover' => '/images/team/hover/team-member-1h.png',
+            'hover' => '/images/team/profile/profile-1.png',
             'title' => 'Job Title',
             'description' => "Our aim is to offer the industry's best quality products at a competitive price, direct to homeowners. More and more customers are now looking for the most cost-effective way to get the same quality products at a fraction of the high street price, and we are happy to advise and liaise with your builders, fitters or project managers throughout your order. For customers who want the full survey and installation service, we truly believe we offer the best package in the business. Our nationwide installation service is unrivalled by any other online company - click here to read more."
         ],
@@ -153,7 +153,7 @@ class TeamsController extends Controller
             'image' => '/images/team/team-member-1.png',
             'name' => 'Team Member 1',
             'selected' => '/images/team/selected/team-member-1s.png',
-            'hover' => '/images/team/hover/team-member-1h.png',
+            'hover' => '/images/team/profile/profile-1.png',
             'title' => 'Job Title',
             'description' => "Our aim is to offer the industry's best quality products at a competitive price, direct to homeowners. More and more customers are now looking for the most cost-effective way to get the same quality products at a fraction of the high street price, and we are happy to advise and liaise with your builders, fitters or project managers throughout your order. For customers who want the full survey and installation service, we truly believe we offer the best package in the business. Our nationwide installation service is unrivalled by any other online company - click here to read more."
         ],
@@ -180,7 +180,7 @@ class TeamsController extends Controller
             'image' => '/images/team/team-member-1.png',
             'name' => 'Team Member 1',
             'selected' => '/images/team/selected/team-member-1s.png',
-            'hover' => '/images/team/hover/team-member-1h.png',
+            'hover' => '/images/team/profile/profile-1.png',
             'title' => 'Job Title',
             'description' => "Our aim is to offer the industry's best quality products at a competitive price, direct to homeowners. More and more customers are now looking for the most cost-effective way to get the same quality products at a fraction of the high street price, and we are happy to advise and liaise with your builders, fitters or project managers throughout your order. For customers who want the full survey and installation service, we truly believe we offer the best package in the business. Our nationwide installation service is unrivalled by any other online company - click here to read more."
         ],
@@ -199,7 +199,7 @@ class TeamsController extends Controller
             'image' => '/images/team/team-member-1.png',
             'name' => 'Team Member 1',
             'selected' => '/images/team/selected/team-member-1s.png',
-            'hover' => '/images/team/hover/team-member-1h.png',
+            'hover' => '/images/team/profile/profile-1.png',
             'title' => 'Job Title',
             'description' => "Our aim is to offer the industry's best quality products at a competitive price, direct to homeowners. More and more customers are now looking for the most cost-effective way to get the same quality products at a fraction of the high street price, and we are happy to advise and liaise with your builders, fitters or project managers throughout your order. For customers who want the full survey and installation service, we truly believe we offer the best package in the business. Our nationwide installation service is unrivalled by any other online company - click here to read more."
         ],
@@ -226,7 +226,7 @@ class TeamsController extends Controller
             'image' => '/images/team/team-member-1.png',
             'name' => 'Team Member 1',
             'selected' => '/images/team/selected/team-member-1s.png',
-            'hover' => '/images/team/hover/team-member-1h.png',
+            'hover' => '/images/team/profile/profile-1.png',
             'title' => 'Job Title',
             'description' => "Our aim is to offer the industry's best quality products at a competitive price, direct to homeowners. More and more customers are now looking for the most cost-effective way to get the same quality products at a fraction of the high street price, and we are happy to advise and liaise with your builders, fitters or project managers throughout your order. For customers who want the full survey and installation service, we truly believe we offer the best package in the business. Our nationwide installation service is unrivalled by any other online company - click here to read more."
         ],
@@ -245,7 +245,7 @@ class TeamsController extends Controller
             'image' => '/images/team/team-member-1.png',
             'name' => 'Team Member 1',
             'selected' => '/images/team/selected/team-member-1s.png',
-            'hover' => '/images/team/hover/team-member-1h.png',
+            'hover' => '/images/team/profile/profile-1.png',
             'title' => 'Job Title',
             'description' => "Our aim is to offer the industry's best quality products at a competitive price, direct to homeowners. More and more customers are now looking for the most cost-effective way to get the same quality products at a fraction of the high street price, and we are happy to advise and liaise with your builders, fitters or project managers throughout your order. For customers who want the full survey and installation service, we truly believe we offer the best package in the business. Our nationwide installation service is unrivalled by any other online company - click here to read more."
         ],
@@ -264,7 +264,7 @@ class TeamsController extends Controller
             'image' => '/images/team/team-member-1.png',
             'name' => 'Team Member 1',
             'selected' => '/images/team/selected/team-member-1s.png',
-            'hover' => '/images/team/hover/team-member-1h.png',
+            'hover' => '/images/team/profile/profile-1.png',
             'title' => 'Job Title',
             'description' => "Our aim is to offer the industry's best quality products at a competitive price, direct to homeowners. More and more customers are now looking for the most cost-effective way to get the same quality products at a fraction of the high street price, and we are happy to advise and liaise with your builders, fitters or project managers throughout your order. For customers who want the full survey and installation service, we truly believe we offer the best package in the business. Our nationwide installation service is unrivalled by any other online company - click here to read more."
         ],
@@ -291,7 +291,7 @@ class TeamsController extends Controller
             'image' => '/images/team/team-member-1.png',
             'name' => 'Team Member 1',
             'selected' => '/images/team/selected/team-member-1s.png',
-            'hover' => '/images/team/hover/team-member-1h.png',
+            'hover' => '/images/team/profile/profile-1.png',
             'title' => 'Job Title',
             'description' => "Our aim is to offer the industry's best quality products at a competitive price, direct to homeowners. More and more customers are now looking for the most cost-effective way to get the same quality products at a fraction of the high street price, and we are happy to advise and liaise with your builders, fitters or project managers throughout your order. For customers who want the full survey and installation service, we truly believe we offer the best package in the business. Our nationwide installation service is unrivalled by any other online company - click here to read more."
         ],
@@ -318,7 +318,7 @@ class TeamsController extends Controller
             'image' => '/images/team/team-member-1.png',
             'name' => 'Team Member 1',
             'selected' => '/images/team/selected/team-member-1s.png',
-            'hover' => '/images/team/hover/team-member-1h.png',
+            'hover' => '/images/team/profile/profile-1.png',
             'title' => 'Job Title',
             'description' => "Our aim is to offer the industry's best quality products at a competitive price, direct to homeowners. More and more customers are now looking for the most cost-effective way to get the same quality products at a fraction of the high street price, and we are happy to advise and liaise with your builders, fitters or project managers throughout your order. For customers who want the full survey and installation service, we truly believe we offer the best package in the business. Our nationwide installation service is unrivalled by any other online company - click here to read more."
         ],
@@ -337,7 +337,7 @@ class TeamsController extends Controller
             'image' => '/images/team/team-member-1.png',
             'name' => 'Team Member 1',
             'selected' => '/images/team/selected/team-member-1s.png',
-            'hover' => '/images/team/hover/team-member-1h.png',
+            'hover' => '/images/team/profile/profile-1.png',
             'title' => 'Job Title',
             'description' => "Our aim is to offer the industry's best quality products at a competitive price, direct to homeowners. More and more customers are now looking for the most cost-effective way to get the same quality products at a fraction of the high street price, and we are happy to advise and liaise with your builders, fitters or project managers throughout your order. For customers who want the full survey and installation service, we truly believe we offer the best package in the business. Our nationwide installation service is unrivalled by any other online company - click here to read more."
         ],
@@ -364,7 +364,7 @@ class TeamsController extends Controller
             'image' => '/images/team/team-member-1.png',
             'name' => 'Team Member 1',
             'selected' => '/images/team/selected/team-member-1s.png',
-            'hover' => '/images/team/hover/team-member-1h.png',
+            'hover' => '/images/team/profile/profile-1.png',
             'title' => 'Job Title',
             'description' => "Our aim is to offer the industry's best quality products at a competitive price, direct to homeowners. More and more customers are now looking for the most cost-effective way to get the same quality products at a fraction of the high street price, and we are happy to advise and liaise with your builders, fitters or project managers throughout your order. For customers who want the full survey and installation service, we truly believe we offer the best package in the business. Our nationwide installation service is unrivalled by any other online company - click here to read more."
         ],
@@ -383,7 +383,7 @@ class TeamsController extends Controller
             'image' => '/images/team/team-member-1.png',
             'name' => 'Team Member 1',
             'selected' => '/images/team/selected/team-member-1s.png',
-            'hover' => '/images/team/hover/team-member-1h.png',
+            'hover' => '/images/team/profile/profile-1.png',
             'title' => 'Job Title',
             'description' => "Our aim is to offer the industry's best quality products at a competitive price, direct to homeowners. More and more customers are now looking for the most cost-effective way to get the same quality products at a fraction of the high street price, and we are happy to advise and liaise with your builders, fitters or project managers throughout your order. For customers who want the full survey and installation service, we truly believe we offer the best package in the business. Our nationwide installation service is unrivalled by any other online company - click here to read more."
         ],
@@ -402,7 +402,7 @@ class TeamsController extends Controller
             'image' => '/images/team/team-member-1.png',
             'name' => 'Team Member 1',
             'selected' => '/images/team/selected/team-member-1s.png',
-            'hover' => '/images/team/hover/team-member-1h.png',
+            'hover' => '/images/team/profile/profile-1.png',
             'title' => 'Job Title',
             'description' => "Our aim is to offer the industry's best quality products at a competitive price, direct to homeowners. More and more customers are now looking for the most cost-effective way to get the same quality products at a fraction of the high street price, and we are happy to advise and liaise with your builders, fitters or project managers throughout your order. For customers who want the full survey and installation service, we truly believe we offer the best package in the business. Our nationwide installation service is unrivalled by any other online company - click here to read more."
         ],
