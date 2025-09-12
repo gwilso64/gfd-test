@@ -35370,7 +35370,7 @@ var OurStorySection = function OurStorySection() {
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("img", {
           src: currentLocation.images.mobile.bottom,
           alt: "Mobile bottom image",
-          className: "transition-opacity duration-700 relative -left-[22px] h-auto -mt-[115px] ".concat(isTransitioning ? 'opacity-0' : 'opacity-100')
+          className: "transition-opacity duration-700 relative -left-[22px] h-auto -mt-[115px] max-[400px]:-mt-[67px] ".concat(isTransitioning ? 'opacity-0' : 'opacity-100')
         })
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
         "class": "relative bg-[#F5F5F5] px-5 pt-5 pb-20 mt-4 sm:ml-4 w-[calc(100%-20px)] float-right",
@@ -35585,7 +35585,7 @@ var OurTeamSection = function OurTeamSection() {
     setSelectedMember(teams[newIndex]);
   };
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
-    className: "pl-4 pb-8 pr-4 mx-auto",
+    className: "pl-4 pb-8 pr-4 mx-auto sm:overflow-x-hidden",
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
       className: "justify-between items-center mb-4 w-full block",
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {

@@ -136,7 +136,7 @@ const OurStorySection = () => {
           <img 
             src={currentLocation.images.mobile.bottom}
             alt="Mobile bottom image"
-            className={`transition-opacity duration-700 relative -left-[22px] h-auto -mt-[115px] ${
+            className={`transition-opacity duration-700 relative -left-[22px] h-auto -mt-[115px] max-[400px]:-mt-[67px] ${
                   isTransitioning ? 'opacity-0' : 'opacity-100'
                 }`}
           />
