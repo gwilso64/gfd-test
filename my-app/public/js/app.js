@@ -35035,7 +35035,7 @@ var TeamMemberPopup = function TeamMemberPopup(_ref) {
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
     className: "fixed inset-0 bg-black flex items-center justify-center z-50 p-4",
     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-      className: "max-w-[327px] w-full max-h-[90vh] overflow-y-auto",
+      className: "bg-white max-w-[327px] w-full max-h-[90vh] overflow-y-auto",
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
         className: "flex justify-between items-center text-black pr-6 pt-6 border-black border-b ml-6",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("h3", {

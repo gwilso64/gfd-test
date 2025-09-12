@@ -16,7 +16,7 @@ const TeamMemberPopup = ({
 
     return (
         <div className="fixed inset-0 bg-black flex items-center justify-center z-50 p-4">
-            <div className="max-w-[327px] w-full max-h-[90vh] overflow-y-auto">
+            <div className="bg-white max-w-[327px] w-full max-h-[90vh] overflow-y-auto">
                 <div className="flex justify-between items-center text-black pr-6 pt-6 border-black border-b ml-6">
                     <h3 className="text-xl"><strong>Meet</strong>, {member.name}</h3>
                     <button 
