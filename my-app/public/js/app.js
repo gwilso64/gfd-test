@@ -35326,9 +35326,9 @@ var OurStorySection = function OurStorySection() {
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
             className: "relative text-content",
             children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-              className: "bg-white ml-4 sm:ml-0 sm:pt-4 pr-8 w-full max-w-4xl z-10 relative flex max-[325px]:pr-[0px]  ",
+              className: "bg-white ml-4 sm:ml-0 sm:pt-4 pr-8 w-full max-w-4xl z-10 relative flex max-[350px]:pr-[0px]  ",
               children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-                className: "lg:w-4/5 pr-6 bg-white p-8 pt-4 max-[325px]:pr-4 max-[325px]:p-4",
+                className: "lg:w-4/5 pr-6 bg-white p-8 pt-4 max-[350px]:pr-4 max-[350px]:p-4",
                 children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
                   className: "max-w-[720px] w-full text-lg leading-normal",
                   children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("h2", {
