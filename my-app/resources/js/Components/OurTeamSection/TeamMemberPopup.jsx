@@ -1,5 +1,10 @@
 import React from 'react';
 
+/*
+* Component for TeamMemberPopup
+* event: onclick 
+*/
+
 const TeamMemberPopup = ({ 
     isOpen, 
     member, 

@@ -32,13 +32,13 @@ const OurStorySection = () => {
 
    * Background:  
    * 
-   * My approach for the background is to provide a gradient to create the black and white, the images can then be placed on top.
-   * The thatched house background needs to be center to the content, so this needs to be a background for the main content.
+   *    My approach for the background is to provide a gradient to create the black and white, the images can then be placed on top.
+   *    The thatched house background needs to be center to the content, so this needs to be a background for the main content.
    * 
    * Animate:  
    * 
-   * I went for a image fade in fade out with text included. 
-   * alternative would be to use ImageWithCaption mentioned above.
+   *    I went for a image fade in/fade out with text included. 
+   *    Alternatively could use ImageWithCaption component mentioned above.
    */
 
   // Auto-cycle with fade animation
@@ -57,7 +57,6 @@ const OurStorySection = () => {
 
   return (
     <>
-
       {/* Top left image, separate from main body of content. I am thinking responsive-image could be used to animate image later */}  
       <img 
         className={`hidden md:block lg:z-[2] md:z-[-1] responsive-image transition-opacity duration-700 ${
@@ -93,7 +92,7 @@ const OurStorySection = () => {
                     <h2 className="text-[45px] font-bold text-gray-800 mb-4 pb-4 border-b-2 border-gray-800">
                       Our Story
                     </h2>
-                    {/* Main text - enhanced for mobile responsiveness */}
+                    {/* Main text - Second P does not should on mobile */}
                     <p className="mb-4">
                       Coming from a lifelong background in the double glazing industry, we began trading online in 2008. Our core product offering was composite doors, and we were one of the first companies in the UK to pioneer online ordering for this product.
                     </p>
@@ -105,7 +104,7 @@ const OurStorySection = () => {
               </div>
             </div>
 
-            {/* Main desktop image, positioned left of mainbox */}
+            {/* Main desktop image - left of mainbox */}
             <img 
               src={currentLocation.images.desktop.main} 
               alt="Desktop main image" 
@@ -133,7 +132,6 @@ const OurStorySection = () => {
 
       {/* Mobile text */}
       <div className="md:hidden">
-        {/* Remove negative margin, use gap or padding instead */}
         <div className="relative">
           <img 
             src={currentLocation.images.mobile.bottom}
@@ -143,7 +141,6 @@ const OurStorySection = () => {
                 }`}
           />
         </div>
-        
         {/* Uses flexbox to prevent overlap */}
        <div class="relative bg-[#F5F5F5] px-5 pt-5 pb-20 mt-4 sm:ml-4 w-[calc(100%-20px)] float-right">
           <p class="font-['Red_Hat_Text'] text-[14.4px] font-semibold  ">

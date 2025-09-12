@@ -1,5 +1,10 @@
 import React from 'react';
 
+/*
+* Component for TeamMemberOverlay
+* event: onHover 
+*/
+
 const TeamMemberOverlay = ({ member, onMemberClick }) => {
     return (
         <div 

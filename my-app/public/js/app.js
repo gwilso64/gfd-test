@@ -34815,6 +34815,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 
 
+/*
+* NOT IN USE
+* Component for ImageWithCaption
+* this could be used as an alterntive to animating whole images with text. 
+* This component could replace all images that have captions. 
+* This will improve usability as text wil be able to adapt to space and size.
+*/
+
 var ImageWithCaption = function ImageWithCaption(_ref) {
   var src = _ref.src,
     caption = _ref.caption,
@@ -34878,6 +34886,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 
 
+/*
+* NOT IN USE (alterative to using TeamMemberOverlay. TeamMemberOverlay provids dyamic detailS)
+* Component for TeamMemberOverlay
+* event: onHover 
+*/
+
 var TeamMember = function TeamMember(_ref) {
   var member = _ref.member,
     onMemberClick = _ref.onMemberClick;
@@ -34935,6 +34949,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 
+
+/*
+* Component for TeamMemberOverlay
+* event: onHover 
+*/
 
 var TeamMemberOverlay = function TeamMemberOverlay(_ref) {
   var member = _ref.member,
@@ -35001,6 +35020,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 
+
+/*
+* Component for TeamMemberPopup
+* event: onclick 
+*/
 
 var TeamMemberPopup = function TeamMemberPopup(_ref) {
   var isOpen = _ref.isOpen,
@@ -35251,13 +35275,13 @@ var OurStorySection = function OurStorySection() {
    *    descriptions do not cause images to overlap
      * Background:  
    * 
-   * My approach for the background is to provide a gradient to create the black and white, the images can then be placed on top.
-   * The thatched house background needs to be center to the content, so this needs to be a background for the main content.
+   *    My approach for the background is to provide a gradient to create the black and white, the images can then be placed on top.
+   *    The thatched house background needs to be center to the content, so this needs to be a background for the main content.
    * 
    * Animate:  
    * 
-   * I went for a image fade in fade out with text included. 
-   * alternative would be to use ImageWithCaption mentioned above.
+   *    I went for a image fade in/fade out with text included. 
+   *    Alternatively could use ImageWithCaption component mentioned above.
    */
 
   // Auto-cycle with fade animation
