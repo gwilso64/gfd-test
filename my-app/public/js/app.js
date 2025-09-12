@@ -34800,6 +34800,193 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/Components/OurStorySection/ImageWithCaption.jsx":
+/*!**********************************************************************!*\
+  !*** ./resources/js/Components/OurStorySection/ImageWithCaption.jsx ***!
+  \**********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+var ImageWithCaption = function ImageWithCaption(_ref) {
+  var src = _ref.src,
+    caption = _ref.caption,
+    x1 = _ref.x1,
+    y1 = _ref.y1,
+    x2 = _ref.x2,
+    y2 = _ref.y2,
+    cx = _ref.cx,
+    cy = _ref.cy;
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+    className: "relative float-left z-[2] inline-block w-[auto]",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
+      src: src,
+      alt: caption,
+      className: "w-auto h-auto md:z-[1]"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+      className: "absolute inset-0 w-full h-full pointer-events-none",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("line", {
+        x1: x1,
+        y1: y1,
+        x2: x2,
+        y2: y2,
+        stroke: "black",
+        strokeWidth: "1"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("circle", {
+        cx: cx,
+        cy: cy,
+        r: "2",
+        fill: "black",
+        stroke: "black",
+        strokeWidth: "1"
+      })]
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+      className: "absolute top-[19%] right-[-100px] w-[100px]",
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+        className: "p-2 text-left",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+          className: "text-xs",
+          children: caption
+        })
+      })
+    })]
+  });
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ImageWithCaption);
+
+/***/ }),
+
+/***/ "./resources/js/Components/OurTeamSection/TeamMember.jsx":
+/*!***************************************************************!*\
+  !*** ./resources/js/Components/OurTeamSection/TeamMember.jsx ***!
+  \***************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+var TeamMember = function TeamMember(_ref) {
+  var member = _ref.member,
+    onMemberClick = _ref.onMemberClick;
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+    className: "overflow-hidden relative md:block cursor-pointer hover:shadow-lg transition-shadow duration-200 group ".concat(!member.clickable ? 'hidden sm:hidden' : ''),
+    onClick: function onClick() {
+      return onMemberClick(member);
+    },
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
+      src: member.image,
+      alt: member.name,
+      className: "w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-300"
+    }), member.hover && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
+      src: member.hover,
+      alt: member.name,
+      className: "absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-all duration-300"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+      className: "absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+        className: "absolute top-0 left-0 right-0 bg-black text-white p-2 text-center text-sm",
+        children: member.role || 'Team Member'
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+        className: "absolute bottom-8 left-1/2 transform -translate-x-1/2",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
+          src: "/images/team/profile/profile-1.png",
+          alt: "Profile icon",
+          className: "w-8 h-8"
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+        className: "absolute bottom-0 left-0 right-0 bg-black text-white p-2 text-center text-sm pointer-events-auto hover:bg-gray-800 transition-colors",
+        onClick: function onClick(e) {
+          e.stopPropagation();
+          onMemberClick(member);
+        },
+        children: "View Profile"
+      })]
+    })]
+  }, member.id);
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (TeamMember);
+
+/***/ }),
+
+/***/ "./resources/js/Components/OurTeamSection/TeamMemberOverlay.jsx":
+/*!**********************************************************************!*\
+  !*** ./resources/js/Components/OurTeamSection/TeamMemberOverlay.jsx ***!
+  \**********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+var TeamMemberOverlay = function TeamMemberOverlay(_ref) {
+  var member = _ref.member,
+    onMemberClick = _ref.onMemberClick;
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+    className: "overflow-hidden relative md:block cursor-pointer group ".concat(!member.clickable ? 'hidden sm:hidden' : ''),
+    onClick: function onClick() {
+      return onMemberClick(member);
+    },
+    onMouseEnter: function onMouseEnter(e) {
+      var img = e.currentTarget.querySelector('img');
+      if (member.hover && img) {
+        img.src = member.hover;
+      }
+    },
+    onMouseLeave: function onMouseLeave(e) {
+      var img = e.currentTarget.querySelector('img');
+      if (img) {
+        img.src = member.image;
+      }
+    },
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
+      src: member.image,
+      alt: member.name,
+      className: "w-full h-full object-cover filter"
+    }), member.clickable && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+      className: "absolute inset-0 opacity-0 group-hover:opacity-100 pointer-events-none",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+        className: "absolute top-0 left-0 right-0 bg-black text-white p-2 text-left text-sm",
+        children: member.title || 'Team Member'
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+        className: "absolute bottom-0 left-0 right-0 bg-black text-white p-2 flex items-right justify-right gap-2 text-sm pointer-events-auto",
+        onClick: function onClick(e) {
+          e.stopPropagation();
+          onMemberClick(member);
+        },
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+          className: "ml-auto -top-[2px] relative",
+          children: "View Profile"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("img", {
+          src: "images/team/profile-icon.png",
+          alt: "Profile icon",
+          className: "w-4 h-4"
+        })]
+      })]
+    })]
+  }, member.id);
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (TeamMemberOverlay);
+
+/***/ }),
+
 /***/ "./resources/js/Components/OurTeamSection/TeamMemberPopup.jsx":
 /*!********************************************************************!*\
   !*** ./resources/js/Components/OurTeamSection/TeamMemberPopup.jsx ***!
@@ -34824,7 +35011,7 @@ var TeamMemberPopup = function TeamMemberPopup(_ref) {
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
     className: "fixed inset-0 bg-black flex items-center justify-center z-50 p-4",
     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-      className: "bg-white max-w-[327px] w-full max-h-[90vh] overflow-y-auto",
+      className: "max-w-[327px] w-full max-h-[90vh] overflow-y-auto",
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
         className: "flex justify-between items-center text-black pr-6 pt-6 border-black border-b ml-6",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("h3", {
@@ -34941,7 +35128,7 @@ var CompanyValuesSection = function CompanyValuesSection() {
 
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-      className: "min-h-screen",
+      className: "min-h-screen font-['Red_Hat_Text'] bg-[#F5F5F5] md:bg-none lg:bg-[url('/images/companyValues/company-value-background.png')]  bg-no-repeat bg-inherit",
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
         className: "w-full grid grid-cols-1 sm:grid-cols-[1fr_2fr] gap-8 pb-8 lg:pt-20 md:pt-20 sm:pt-0",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
@@ -34970,7 +35157,7 @@ var CompanyValuesSection = function CompanyValuesSection() {
             className: "pb-8 sm:hidden",
             src: "/images/mobile/mobile-4.png"
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-            className: "hidden sm:block text-brand pr-5 max-w-[932px] w-full ml-auto",
+            className: "hidden sm:block text-brand pr-5 max-w-[932px] w-full ml-auto md:border-b md:border-gray-800",
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
               children: "We know that our continued success is down to our customers, and treating them with respect. Starting from humble beginnings means that we value each and every customer equally, regardless of the order size."
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
@@ -35015,7 +35202,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _data_locations__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../data/locations */ "./resources/js/data/locations.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _Components_OurStorySection_ImageWithCaption__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Components/OurStorySection/ImageWithCaption */ "./resources/js/Components/OurStorySection/ImageWithCaption.jsx");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 function _slicedToArray(r, e) { return _arrayWithHoles(r) || _iterableToArrayLimit(r, e) || _unsupportedIterableToArray(r, e) || _nonIterableRest(); }
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
 function _unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) return _arrayLikeToArray(r, a); var t = {}.toString.call(r).slice(8, -1); return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray(r, a) : void 0; } }
@@ -35024,6 +35212,24 @@ function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" !=
 function _arrayWithHoles(r) { if (Array.isArray(r)) return r; }
 
 
+
+
+/** 
+ * ImageWithCaption could be used as an alternative to images with captions. 
+ * This would allow us to move the captions to a more suitable location (and increase text size) on screen sizes
+ * <ImageWithCaption
+    src="/images/ourStory/door-side-bar.png"
+    caption="Aluminium Entrance Doors"
+    x1="60%"
+    y1="30%"
+    x2="95%"
+    y2="28%"
+    cx="95%"
+    cy="28%"
+  />
+ * 
+ * 
+*/
 
 var OurStorySection = function OurStorySection() {
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(0),
@@ -35049,8 +35255,8 @@ var OurStorySection = function OurStorySection() {
    * 
    * Animate:  
    * 
-   * My approach for the background is to provide a gradient to create the black and white, the images can then be placed on top.
-   * The thatched house background needs to be center to the content, so this needs to be a background for the main content.
+   * I went for a image fade in fade out with text included. 
+   * alternative would be to use ImageWithCaption mentioned above.
    */
 
   // Auto-cycle with fade animation
@@ -35058,63 +35264,60 @@ var OurStorySection = function OurStorySection() {
     var interval = setInterval(function () {
       // Start fade out
       setIsTransitioning(true);
-
-      // After fade out completes, change location and fade back in
       setTimeout(function () {
         setCurrentLocationId(function (prev) {
           return (prev + 1) % _data_locations__WEBPACK_IMPORTED_MODULE_1__["default"].length;
         });
         setIsTransitioning(false);
-      }, 200); // 300ms fade out duration
-    }, 5000); // 2 seconds total cycle time
-
+      }, 300); // 300ms fade out duration
+    }, 5000); // 5 seconds total cycle time
     return function () {
       return clearInterval(interval);
     };
   }, []);
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.Fragment, {
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.Fragment, {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("img", {
       className: "hidden md:block lg:z-[2] md:z-[-1] responsive-image transition-opacity duration-700 ".concat(isTransitioning ? 'opacity-0' : 'opacity-100'),
       src: currentLocation.images.desktop.sidebar,
       alt: "Sidebar"
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-      className: "main-block relative bg-white md:bg-gradient-to-l md:from-black md:via-black md:to-white md:from-0% md:via-65% md:to-65% min-h-[calc(100vh)] flex items-start md:pt-4 md:pt-0 px-4",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+      className: "main-block relative bg-[#F5F5F5] md:bg-gradient-to-l md:from-black md:via-black md:to-[#F5F5F5] md:from-0% md:via-65% md:to-65% min-h-[calc(100vh)] flex items-start md:pt-4 md:pt-0 px-4",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
         className: "relative max-w-4xl w-full mx-auto",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
           className: "md:hidden flex justify-end relative top-[30px] z-[9]",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
             className: "overflow-hidden w-full",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("img", {
               src: currentLocation.images.mobile.top,
               alt: "Mobile top image",
               className: "w-3/4 h-full object-cover transition-opacity duration-700 ml-auto ".concat(isTransitioning ? 'opacity-0' : 'opacity-100')
             })
           })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-          className: "text-content main-box relative flex sm:justify-start justify-center lg:pl-12 pr-12 pb-24 pt-12 bg-cover bg-center sm:ml-6 bg-no-repeat",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+          className: "text-content main-box relative flex sm:justify-start justify-center lg:pl-12 pr-12 pb-24 pt-10 bg-cover bg-center sm:ml-6 bg-no-repeat",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
             className: "relative text-content",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-              className: "bg-white ml-4 sm:pt-4 pr-8 w-full max-w-4xl z-10 relative flex",
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-                className: "lg:w-4/5 pr-6 bg-white p-8",
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-                  className: "story-text-container transition-opacity duration-700 ".concat(isTransitioning ? 'opacity-0' : 'opacity-100'),
-                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h2", {
-                    className: "text-2xl font-bold text-gray-800 mb-4 pb-6 border-b-2 border-gray-800",
-                    children: currentLocation.title
-                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+              className: "bg-white lg:ml-0 sm:ml-4 sm:pt-4 pr-8 w-full max-w-4xl z-10 relative flex",
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+                className: "lg:w-4/5 pr-6 bg-white p-8 pt-4 ",
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+                  className: "max-w-[720px] w-full text-lg leading-normal",
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("h2", {
+                    className: "text-[45px] font-bold text-gray-800 mb-4 pb-4 border-b-2 border-gray-800",
+                    children: "Our Story"
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
                     className: "mb-4",
-                    children: currentLocation.content.mainText[0]
-                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
+                    children: "Coming from a lifelong background in the double glazing industry, we began trading online in 2008. Our core product offering was composite doors, and we were one of the first companies in the UK to pioneer online ordering for this product."
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
                     className: "hidden md:block mb-4 last:mb-0",
-                    children: currentLocation.content.mainText[1]
+                    children: "Over the past 15 years, we have expanded our portfolio of products across a range of composite, aluminium, uPVC and security products. Our goal was always to offer a complete home improvement solution, which we now carry out nationwide through GFD Homes."
                   })]
                 })
               })
             })
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("img", {
             src: currentLocation.images.desktop.main,
             alt: "Desktop main image",
             width: "433",
@@ -35125,29 +35328,29 @@ var OurStorySection = function OurStorySection() {
             className: "max-w-[433px] top-10 object-cover p-2 z-50 absolute transform origin-left transition-opacity duration-700 responsive-abs-image hidden lg:block  ".concat(isTransitioning ? 'opacity-0' : 'opacity-100')
           })]
         })]
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-        className: "bottom-images w-full sm:w-3/4 md:w-2/3 lg:w-1/2 mx-auto transition-opacity duration-700 hidden md:block ".concat(isTransitioning ? 'opacity-0' : 'opacity-100'),
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+        className: "absolute -left-[20px] right-0 bottom-0 max-w-[1200px] w-full mx-auto z-[10] hidden md:block md:w-[100%] md:-left-[0px] lg:w-full transition-opacity duration-700 ".concat(isTransitioning ? 'opacity-0' : 'opacity-100'),
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("img", {
           className: "left-bottom w-full object-contain",
           src: currentLocation.images.desktop.leftBottom,
           alt: "Left bottom image"
         })
       })]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
       className: "md:hidden",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
         className: "relative",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("img", {
           src: currentLocation.images.mobile.bottom,
           alt: "Mobile bottom image",
           className: "transition-opacity duration-700 relative -left-[22px] h-auto -mt-[115px] ".concat(isTransitioning ? 'opacity-0' : 'opacity-100')
         })
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
         className: "bg-[#F5F5F5] px-5 pt-5 pb-5 mt-4 sm:ml-4 w-[calc(100%-20px)] float-right",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
           className: "font-['Red_Hat_Text'] text-[14.4px] font-semibold mb-4",
-          children: currentLocation.content.mobileText
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
+          children: "Over the past 15 years, we have expanded our portfolio of products across a range of composite, aluminium, uPVC and security products. Our goal was always to offer a complete home improvement solution, which we now carry out nationwide through GFD Homes."
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("img", {
           className: "ml-auto block -right-[20px] relative",
           src: currentLocation.images.mobile.side,
           alt: "Mobile side image"
@@ -35173,7 +35376,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _Components_OurTeamSection_TeamMemberPopup__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Components/OurTeamSection/TeamMemberPopup */ "./resources/js/Components/OurTeamSection/TeamMemberPopup.jsx");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _Components_OurTeamSection_TeamMemberOverlay__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Components/OurTeamSection/TeamMemberOverlay */ "./resources/js/Components/OurTeamSection/TeamMemberOverlay.jsx");
+/* harmony import */ var _Components_OurTeamSection_TeamMember__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../Components/OurTeamSection/TeamMember */ "./resources/js/Components/OurTeamSection/TeamMember.jsx");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 function _toConsumableArray(r) { return _arrayWithoutHoles(r) || _iterableToArray(r) || _unsupportedIterableToArray(r) || _nonIterableSpread(); }
 function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
 function _iterableToArray(r) { if ("undefined" != typeof Symbol && null != r[Symbol.iterator] || null != r["@@iterator"]) return Array.from(r); }
@@ -35188,6 +35393,8 @@ function _unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) 
 function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }
 function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (null != t) { var e, n, i, u, a = [], f = !0, o = !1; try { if (i = (t = t.call(r)).next, 0 === l) { if (Object(t) !== t) return; f = !1; } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0); } catch (r) { o = !0, n = r; } finally { try { if (!f && null != t["return"] && (u = t["return"](), Object(u) !== u)) return; } finally { if (o) throw n; } } return a; } }
 function _arrayWithHoles(r) { if (Array.isArray(r)) return r; }
+
+
 
 
 
@@ -35274,11 +35481,11 @@ var OurTeamSection = function OurTeamSection() {
   }, []);
 
   // when loading display simple loading message
-  if (loading) return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+  if (loading) return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
     children: "Loading..."
   });
   // when loading display simple error message (message comes from backend)
-  if (error) return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+  if (error) return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
     children: ["Error: ", error]
   });
 
@@ -35311,105 +35518,27 @@ var OurTeamSection = function OurTeamSection() {
   // next arrow button
   var nextSlide = function nextSlide() {
     var maxSlides = window.innerWidth < 768 ? mobileSlide : totalSlides;
+    // gets set value, updates with copy and then replaces
     setCurrentSlide(function (prev) {
       return (prev + 1) % maxSlides;
     });
   };
+
+  // prev arrow button
   var prevSlide = function prevSlide() {
     var maxSlides = window.innerWidth < 768 ? mobileSlide : totalSlides;
+    // gets set value, updates with copy and then replaces
     setCurrentSlide(function (prev) {
       return (prev - 1 + maxSlides) % maxSlides;
     });
-  };
-  var renderTeamTeamMember = function renderTeamTeamMember(member) {
-    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-      className: "overflow-hidden relative md:block cursor-pointer group ".concat(!member.clickable ? 'hidden sm:hidden' : ''),
-      onClick: function onClick() {
-        return handleTeamMemberClick(member);
-      },
-      onMouseEnter: function onMouseEnter(e) {
-        var img = e.currentTarget.querySelector('img');
-        if (member.hover && img) {
-          img.src = member.hover;
-        }
-      },
-      onMouseLeave: function onMouseLeave(e) {
-        var img = e.currentTarget.querySelector('img');
-        if (img) {
-          img.src = member.image;
-        }
-      },
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
-        src: member.image,
-        alt: member.name,
-        className: "w-full h-full object-cover filter"
-      }), member.clickable && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-        className: "absolute inset-0 opacity-0 group-hover:opacity-100 pointer-events-none",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-          className: "absolute top-0 left-0 right-0 bg-black text-white p-2 text-left text-sm",
-          children: member.title || 'Team Member'
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-          className: "absolute bottom-0 left-0 right-0 bg-black text-white p-2 flex items-right justify-right gap-2 text-sm pointer-events-auto",
-          onClick: function onClick(e) {
-            e.stopPropagation();
-            handleTeamMemberClick(member);
-          },
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("span", {
-            className: "ml-auto -top-[2px] relative",
-            children: "View Profile"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
-            src: "images/team/profile-icon.png",
-            alt: "Profile icon",
-            className: "w-4 h-4"
-          })]
-        })]
-      })]
-    }, member.id);
-  };
-  // template for each team member to build the jsx
-  // Added !member.clickable ? 'hidden sm:hidden' : '' to make sure not clickable items (text) are not visible on mobile
-  var renderTeamMember = function renderTeamMember(member) {
-    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-      className: "overflow-hidden relative md:block cursor-pointer hover:shadow-lg transition-shadow duration-200 group ".concat(!member.clickable ? 'hidden sm:hidden' : ''),
-      onClick: function onClick() {
-        return handleTeamMemberClick(member);
-      },
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
-        src: member.image,
-        alt: member.name,
-        className: "w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-300"
-      }), member.hover && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
-        src: member.hover,
-        alt: member.name,
-        className: "absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-all duration-300"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-        className: "absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-          className: "absolute top-0 left-0 right-0 bg-black text-white p-2 text-center text-sm",
-          children: member.role || 'Team Member'
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-          className: "absolute bottom-8 left-1/2 transform -translate-x-1/2",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
-            src: "/images/team/profile/profile-1.png",
-            alt: "Profile icon",
-            className: "w-8 h-8"
-          })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-          className: "absolute bottom-0 left-0 right-0 bg-black text-white p-2 text-center text-sm pointer-events-auto hover:bg-gray-800 transition-colors",
-          onClick: function onClick(e) {
-            e.stopPropagation();
-            handleTeamMemberClick(member);
-          },
-          children: "View Profile"
-        })]
-      })]
-    }, member.id);
   };
 
   // Navigation functions for popup
   var navigateTeamMember = function navigateTeamMember(direction) {
     // Extract original ID if it contains slide prefix
     var originalId = selectedMember.id.toString().includes('-') ? parseInt(selectedMember.id.toString().split('-').pop()) : selectedMember.id;
+
+    // find what page we are currently on    
     var currentIndex = teams.findIndex(function (member) {
       return member.id === originalId;
     });
@@ -35422,51 +35551,57 @@ var OurTeamSection = function OurTeamSection() {
     } else {
       newIndex = currentIndex > 0 ? currentIndex - 1 : teams.length - 1;
     }
-    // Skip over non clickable items
+    // Skip over non clickable items (letters)
     if (teams[newIndex].clickable === false) {
       newIndex = newIndex + 1;
     }
     setSelectedMember(teams[newIndex]);
   };
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-    className: "pl-4 pb-8 pr-4 max-w-6xl mx-auto",
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+    className: "pl-4 pb-8 pr-4 mx-auto",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
       className: "justify-between items-center mb-4 w-full block",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h2", {
-          className: "text-4xl font-bold text-black mb-2 ",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("h2", {
+          className: " m-auto text-4xl font-bold text-black mb-2 ",
           children: "Our Team"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-          className: "w-full h-px bg-black"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+          "class": "relative max-w-6xl",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+            className: "relative",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+              className: "absolute bottom-0 left-0 w-screen border-b border-gray-800"
+            })
+          })
         })]
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-        className: "hidden md:flex gap-2 justify-end pt-4",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("button", {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+        className: " m-auto hidden md:flex gap-2 justify-end pt-4",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("button", {
           onClick: prevSlide,
           className: "w-10 h-10 hover:bg-gray-200 flex items-center justify-center transition-colors duration-200",
           "aria-label": "Previous slide",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("svg", {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("svg", {
             className: "w-5 h-5",
             fill: "none",
             stroke: "currentColor",
             viewBox: "0 0 24 24",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("path", {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("path", {
               strokeLinecap: "round",
               strokeLinejoin: "round",
               strokeWidth: 2,
               d: "M15 19l-7-7 7-7"
             })
           })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("button", {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("button", {
           onClick: nextSlide,
           className: "w-10 h-10 hover:bg-gray-200 flex items-center justify-center transition-colors duration-200",
           "aria-label": "Next slide",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("svg", {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("svg", {
             className: "w-5 h-5",
             fill: "none",
             stroke: "currentColor",
             viewBox: "0 0 24 24",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("path", {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("path", {
               strokeLinecap: "round",
               strokeLinejoin: "round",
               strokeWidth: 2,
@@ -35474,34 +35609,34 @@ var OurTeamSection = function OurTeamSection() {
             })
           })
         })]
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
         className: "flex md:hidden gap-2 justify-start pt-4",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("button", {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("button", {
           onClick: prevSlide,
           className: "w-5 h-5 bg-black text-white rounded-full hover:bg-gray-800 flex items-center justify-center transition-colors duration-200",
           "aria-label": "Previous slide",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("svg", {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("svg", {
             className: "w-5 h-5",
             fill: "none",
             stroke: "currentColor",
             viewBox: "0 0 24 24",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("path", {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("path", {
               strokeLinecap: "round",
               strokeLinejoin: "round",
               strokeWidth: 2,
               d: "M15 19l-7-7 7-7"
             })
           })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("button", {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("button", {
           onClick: nextSlide,
           className: "w-5 h-5 bg-black text-white rounded-full hover:bg-gray-800 flex items-center justify-center transition-colors duration-200",
           "aria-label": "Next slide",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("svg", {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("svg", {
             className: "w-5 h-5",
             fill: "none",
             stroke: "currentColor",
             viewBox: "0 0 24 24",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("path", {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("path", {
               strokeLinecap: "round",
               strokeLinejoin: "round",
               strokeWidth: 2,
@@ -35510,45 +35645,51 @@ var OurTeamSection = function OurTeamSection() {
           })
         })]
       })]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-      className: "relative overflow-hidden",
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+      className: " m-auto relative overflow-hidden",
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
         className: "flex transition-transform duration-500 ease-in-out",
         style: {
           transform: "translateX(-".concat(currentSlide * 100, "%)")
         },
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
           className: "hidden md:flex",
           children: _toConsumableArray(Array(totalSlides)).map(function (_, slideIndex) {
-            return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+            return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
               className: "w-full flex-shrink-0",
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
                 className: "grid grid-cols-5 grid-rows-3 gap-4",
                 children: teams.slice(slideIndex * 15, slideIndex * 15 + 15).map(function (member) {
-                  return renderTeamTeamMember(member);
+                  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_Components_OurTeamSection_TeamMemberOverlay__WEBPACK_IMPORTED_MODULE_2__["default"], {
+                    member: member,
+                    onMemberClick: handleTeamMemberClick
+                  }, member.id);
                 })
               })
             }, slideIndex);
           })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
           className: "md:hidden flex",
           children: _toConsumableArray(Array(mobileSlide)).map(function (_, slideIndex) {
-            return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+            return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
               className: "w-full flex-shrink-0",
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
                 className: "grid grid-cols-2 gap-2",
                 children: clickableTeams.slice(slideIndex * 6, slideIndex * 6 + 6).map(function (member) {
-                  return renderTeamMember(member);
+                  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_Components_OurTeamSection_TeamMember__WEBPACK_IMPORTED_MODULE_3__["default"], {
+                    member: member,
+                    onMemberClick: handleTeamMemberClick
+                  }, member.id);
                 })
               })
             }, slideIndex);
           })
         })]
       })
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
       className: "md:hidden flex justify-start gap-1.5 mt-4",
       children: _toConsumableArray(Array(mobileSlide)).map(function (_, index) {
-        return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("button", {
+        return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("button", {
           onClick: function onClick() {
             return setCurrentSlide(index);
           },
@@ -35556,7 +35697,7 @@ var OurTeamSection = function OurTeamSection() {
           "aria-label": "Go to slide ".concat(index + 1)
         }, index);
       })
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_Components_OurTeamSection_TeamMemberPopup__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_Components_OurTeamSection_TeamMemberPopup__WEBPACK_IMPORTED_MODULE_1__["default"], {
       isOpen: isPopupOpen,
       member: selectedMember,
       onClose: closePopup,
@@ -35678,11 +35819,6 @@ var currentLocation = locations[currentLocationId];
 // currentLocation.images.desktop.main
 // currentLocation.content.mainText[0]
 
-// Cycle to next location every 20 seconds
-var cycleLocations = function cycleLocations() {
-  currentLocationId = (currentLocationId + 1) % locations.length;
-  return locations[currentLocationId];
-};
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (locations);
 
 /***/ })

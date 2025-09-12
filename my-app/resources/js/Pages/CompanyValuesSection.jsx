@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 const CompanyValuesSection = () => {
 
   // images are either located in companyValues or mobile directory.
@@ -8,7 +7,7 @@ const CompanyValuesSection = () => {
 
   return (
     <div>
-      <div className="min-h-screen">
+      <div className="min-h-screen font-['Red_Hat_Text'] bg-[#F5F5F5] md:bg-none lg:bg-[url('/images/companyValues/company-value-background.png')]  bg-no-repeat bg-inherit">
         <div className="w-full grid grid-cols-1 sm:grid-cols-[1fr_2fr] gap-8 pb-8 lg:pt-20 md:pt-20 sm:pt-0">
           <div>
             <div className="w-full bg-[#F5F5F5] sm:bg-transparent">
@@ -23,7 +22,7 @@ const CompanyValuesSection = () => {
             <img className="pb-6 hidden sm:block ml-auto" src="/images/companyValues/property-slice-1.png"/>
             <img className="pb-16 hidden sm:block ml-auto" src="/images/companyValues/property-slice-2.png"/>
             <img className="pb-8 sm:hidden" src="/images/mobile/mobile-4.png"/>
-            <div className="hidden sm:block text-brand pr-5 max-w-[932px] w-full ml-auto">
+            <div className="hidden sm:block text-brand pr-5 max-w-[932px] w-full ml-auto md:border-b md:border-gray-800">
               <p>We know that our continued success is down to our customers, and treating them with respect. Starting from humble beginnings means that we value each and every customer equally, regardless of the order size.</p>
               <p>As the world becomes more automated by the day, we promise never to lose the personal touch with our customers that we built the foundations of the business on. Our staff are friendly, knowledgeable and always happy to assist.</p>
             </div>

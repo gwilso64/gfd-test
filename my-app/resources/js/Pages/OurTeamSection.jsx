@@ -1,5 +1,7 @@
 import React, { useState,useEffect } from 'react';
 import TeamMemberPopup from '../Components/OurTeamSection/TeamMemberPopup';
+import TeamMemberOverlay from '../Components/OurTeamSection/TeamMemberOverlay';
+import TeamMember from '../Components/OurTeamSection/TeamMember';
 
 const OurTeamSection = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
@@ -23,11 +25,9 @@ const OurTeamSection = () => {
         try {
             setLoading(true);
             const response = await fetch('/api/team-members');
-            
             if (!response.ok) {
-            throw new Error('Failed to fetch teams');
+                throw new Error('Failed to fetch teams');
             }
-            
             const data = await response.json();
             // we use set state to store the teams data
             setTeams(data);
@@ -37,7 +37,6 @@ const OurTeamSection = () => {
             setLoading(false);
         }
         };
-
         fetchTeams();
     }, []);
 
@@ -71,123 +70,16 @@ const OurTeamSection = () => {
     // next arrow button
     const nextSlide = () => {
         const maxSlides = window.innerWidth < 768 ? mobileSlide : totalSlides;
+        // gets set value, updates with copy and then replaces
         setCurrentSlide((prev) => (prev + 1) % maxSlides);
     };
 
+    // prev arrow button
     const prevSlide = () => {
         const maxSlides = window.innerWidth < 768 ? mobileSlide : totalSlides;
+        // gets set value, updates with copy and then replaces
         setCurrentSlide((prev) => (prev - 1 + maxSlides) % maxSlides);
     };
-
-const renderTeamOverlayMember = (member) => {
-
-    return (
-        <div 
-            key={member.id}
-            className={`overflow-hidden relative md:block cursor-pointer group ${
-                !member.clickable ? 'hidden sm:hidden' : ''
-            }`}
-            onClick={() => handleTeamMemberClick(member)}
-            onMouseEnter={(e) => {
-                const img = e.currentTarget.querySelector('img');
-                if (member.hover && img) {
-                    img.src = member.hover;
-                }
-            }}
-            onMouseLeave={(e) => {
-                const img = e.currentTarget.querySelector('img');
-                if (img) {
-                    img.src = member.image;
-                }
-            }}
-        >
-            <img 
-                src={member.image}
-                alt={member.name}
-                className="w-full h-full object-cover filter"
-            />
-         {/* Hover Overlay Content - Only visible on hover */}
-        {member.clickable && (
-            <div className="absolute inset-0 opacity-0 group-hover:opacity-100 pointer-events-none">
-            {/* Role Name at Top */}
-            <div className="absolute top-0 left-0 right-0 bg-black text-white p-2 text-left text-sm">
-                {member.title || 'Team Member'}
-            </div>
-            <div 
-                className="absolute bottom-0 left-0 right-0 bg-black text-white p-2 flex items-right justify-right gap-2 text-sm pointer-events-auto"
-                onClick={(e) => {
-                    e.stopPropagation();
-                    handleTeamMemberClick(member);
-                }}
-            >
-                <span className="ml-auto -top-[2px] relative">View Profile</span>
-                <img 
-                    src="images/team/profile-icon.png" 
-                    alt="Profile icon"
-                    className="w-4 h-4"
-                />
-            </div>
-            </div>
-        )}
-        </div>
-    );
-};
-    // template for each team member to build the jsx
- // Added !member.clickable ? 'hidden sm:hidden' : '' to make sure not clickable items (text) are not visible on mobile
-const renderTeamMember = (member) => {
-    return (
-        <div 
-            key={member.id}
-            className={`overflow-hidden relative md:block cursor-pointer hover:shadow-lg transition-shadow duration-200 group ${
-                !member.clickable ? 'hidden sm:hidden' : ''
-            }`}
-            onClick={() => handleTeamMemberClick(member)}
-        >
-            <img 
-                src={member.image}
-                alt={member.name}
-                className="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-300"
-            />
-            
-            {/* Show hover image on group hover */}
-            {member.hover && (
-                <img 
-                    src={member.hover}
-                    alt={member.name}
-                    className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-all duration-300"
-                />
-            )}
-            
-            {/* Hover Overlay Content - Only visible on hover */}
-            <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-                {/* Role Name at Top */}
-                <div className="absolute top-0 left-0 right-0 bg-black text-white p-2 text-center text-sm">
-                    {member.role || 'Team Member'}
-                </div>
-                
-                {/* Profile Icon above View Profile */}
-                <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
-                    <img 
-                        src="/images/team/profile/profile-1.png" 
-                        alt="Profile icon"
-                        className="w-8 h-8"
-                    />
-                </div>
-                
-                {/* View Profile at Bottom */}
-                <div 
-                    className="absolute bottom-0 left-0 right-0 bg-black text-white p-2 text-center text-sm pointer-events-auto hover:bg-gray-800 transition-colors"
-                    onClick={(e) => {
-                        e.stopPropagation();
-                        handleTeamMemberClick(member);
-                    }}
-                >
-                    View Profile
-                </div>
-            </div>
-        </div>
-    );
-};
 
     // Navigation functions for popup
     const navigateTeamMember = (direction) => {
@@ -195,7 +87,8 @@ const renderTeamMember = (member) => {
         const originalId = selectedMember.id.toString().includes('-') 
             ? parseInt(selectedMember.id.toString().split('-').pop())
             : selectedMember.id;
-            
+        
+        // find what page we are currently on    
         const currentIndex = teams.findIndex(member => member.id === originalId);
         
         // just incase
@@ -208,7 +101,7 @@ const renderTeamMember = (member) => {
         } else {
             newIndex = currentIndex > 0 ? currentIndex - 1 : teams.length - 1;
         }
-        // Skip over non clickable items
+        // Skip over non clickable items (letters)
         if (teams[newIndex].clickable===false) {
             newIndex = newIndex+1;
         }
@@ -216,15 +109,19 @@ const renderTeamMember = (member) => {
     };
 
     return (
-        <div className="pl-4 pb-8 pr-4 max-w-6xl mx-auto">
+        <div className="pl-4 pb-8 pr-4 mx-auto">
             <div className="justify-between items-center mb-4 w-full block">
                 <div>
-                    <h2 className="text-4xl font-bold text-black mb-2 ">Our Team</h2>
+                    <h2 className=" m-auto text-4xl font-bold text-black mb-2 ">Our Team</h2>
                     {/* line below title */}
-                    <div className="w-full h-px bg-black"></div>
+                    <div class="relative max-w-6xl">
+                        <div className="relative">
+                            <div className="absolute bottom-0 left-0 w-screen border-b border-gray-800"></div>
+                        </div>
+                    </div>
                 </div>
                 {/* Desktop nav sliders. added hover state, positioning and created rounded svg for button */}
-                <div className="hidden md:flex gap-2 justify-end pt-4">
+                <div className=" m-auto hidden md:flex gap-2 justify-end pt-4">
                     <button 
                         onClick={prevSlide}
                         className="w-10 h-10 hover:bg-gray-200 flex items-center justify-center transition-colors duration-200"
@@ -267,7 +164,7 @@ const renderTeamMember = (member) => {
                 </div>
             </div>
             {/* overflow hidden so we do not see the next slide - Desktop slider */}
-            <div className="relative overflow-hidden">
+            <div className=" m-auto relative overflow-hidden">
                 <div 
                     className="flex transition-transform duration-500 ease-in-out"
                     style={{ transform: `translateX(-${currentSlide * 100}%)` }}
@@ -277,10 +174,16 @@ const renderTeamMember = (member) => {
                         {[...Array(totalSlides)].map((_, slideIndex) => (
                             <div key={slideIndex} className="w-full flex-shrink-0">
                                 <div className="grid grid-cols-5 grid-rows-3 gap-4">
-                                    {teams
-                                        .slice(slideIndex * 15, slideIndex * 15 + 15)
-                                        .map((member) => renderTeamOverlayMember(member))
-                                    }
+                                {teams
+                                    .slice(slideIndex * 15, slideIndex * 15 + 15)
+                                    .map((member) => (
+                                        <TeamMemberOverlay 
+                                            key={member.id}
+                                            member={member} 
+                                            onMemberClick={handleTeamMemberClick} 
+                                        />
+                                    ))
+                                }
                                 </div>
                             </div>
                         ))}
@@ -290,10 +193,16 @@ const renderTeamMember = (member) => {
                         {[...Array(mobileSlide)].map((_, slideIndex) => (
                             <div key={slideIndex} className="w-full flex-shrink-0">
                                 <div className="grid grid-cols-2 gap-2">
-                                    {clickableTeams
-                                        .slice(slideIndex * 6, slideIndex * 6 + 6)
-                                        .map((member) => renderTeamMember(member))
-                                    }
+                                {clickableTeams
+                                    .slice(slideIndex * 6, slideIndex * 6 + 6)
+                                    .map((member) => (
+                                        <TeamMember 
+                                            key={member.id}
+                                            member={member} 
+                                            onMemberClick={handleTeamMemberClick} 
+                                        />
+                                    ))
+                                }
                                 </div>
                             </div>
                         ))}
@@ -322,8 +231,8 @@ const renderTeamMember = (member) => {
                 onClose={closePopup}
                 onNavigate={navigateTeamMember}
             />
-
         </div>
     );
 }
+
 export default OurTeamSection;

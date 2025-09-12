@@ -62,10 +62,4 @@ const currentLocation = locations[currentLocationId];
 // currentLocation.images.desktop.main
 // currentLocation.content.mainText[0]
 
-// Cycle to next location every 20 seconds
-const cycleLocations = () => {
-  currentLocationId = (currentLocationId + 1) % locations.length;
-  return locations[currentLocationId];
-};
-
 export default locations;
