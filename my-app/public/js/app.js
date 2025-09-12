@@ -35115,7 +35115,9 @@ var TeamMemberPopup = function TeamMemberPopup(_ref) {
               className: "flex justify-between items-center text-black pr-6 mb-2 border-black border-b ml-1",
               children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
                 className: "text-lg",
-                children: member.title
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("strong", {
+                  children: member.title
+                })
               })
             }), member.description && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
               className: "mb-4",

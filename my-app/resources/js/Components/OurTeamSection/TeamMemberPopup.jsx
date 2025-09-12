@@ -62,7 +62,7 @@ const TeamMemberPopup = ({
                         <div className="w-full">
                             {member.title && (
                                 <div className="flex justify-between items-center text-black pr-6 mb-2 border-black border-b ml-1">
-                                    <p className="text-lg">{member.title}</p>
+                                    <p className="text-lg"><strong>{member.title}</strong></p>
                                 </div>
                             )}
                             {member.description && (
