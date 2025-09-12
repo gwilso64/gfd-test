@@ -861,6 +861,15 @@ select {
 .top-\[19\%\] {
   top: 19%;
 }
+.bottom-\[-40px\] {
+  bottom: -40px;
+}
+.right-5 {
+  right: 1.25rem;
+}
+.bottom-\[-220px\] {
+  bottom: -220px;
+}
 .z-0 {
   z-index: 0;
 }
@@ -952,6 +961,18 @@ select {
 .mt-8 {
   margin-top: 2rem;
 }
+.mb-\[480px\] {
+  margin-bottom: 480px;
+}
+.mt-\[480px\] {
+  margin-top: 480px;
+}
+.mt-0 {
+  margin-top: 0px;
+}
+.mt-\[520px\] {
+  margin-top: 520px;
+}
 .block {
   display: block;
 }
@@ -1009,6 +1030,9 @@ select {
 .h-\[40px\] {
   height: 40px;
 }
+.h-\[1px\] {
+  height: 1px;
+}
 .max-h-\[90vh\] {
   max-height: 90vh;
 }
@@ -1062,6 +1086,12 @@ select {
 }
 .w-screen {
   width: 100vw;
+}
+.w-\[320px\] {
+  width: 320px;
+}
+.w-\[120px\] {
+  width: 120px;
 }
 .max-w-4xl {
   max-width: 56rem;
@@ -1389,6 +1419,9 @@ select {
 .pt-12 {
   padding-top: 3rem;
 }
+.pb-20 {
+  padding-bottom: 5rem;
+}
 .text-left {
   text-align: left;
 }
@@ -1709,6 +1742,14 @@ html, body {
     margin-left: 1.5rem;
   }
 
+  .sm\:mt-\[480px\] {
+    margin-top: 480px;
+  }
+
+  .sm\:mb-\[480px\] {
+    margin-bottom: 480px;
+  }
+
   .sm\:block {
     display: block;
   }
@@ -1727,6 +1768,10 @@ html, body {
 
   .sm\:w-1\/2 {
     width: 50%;
+  }
+
+  .sm\:w-screen {
+    width: 100vw;
   }
 
   .sm\:max-w-none {
@@ -1774,6 +1819,14 @@ html, body {
     padding-top: 1rem;
   }
 
+  .sm\:pt-\[480px\] {
+    padding-top: 480px;
+  }
+
+  .sm\:pb-\[480px\] {
+    padding-bottom: 480px;
+  }
+
   .sm\:text-left {
     text-align: left;
   }
@@ -1791,6 +1844,10 @@ html, body {
 
   .md\:static {
     position: static;
+  }
+
+  .md\:absolute {
+    position: absolute;
   }
 
   .md\:-left-\[0px\] {
@@ -1811,6 +1868,18 @@ html, body {
 
   .md\:col-span-full {
     grid-column: 1 / -1;
+  }
+
+  .md\:mt-\[0px\] {
+    margin-top: 0px;
+  }
+
+  .md\:mt-0 {
+    margin-top: 0px;
+  }
+
+  .md\:mt-\[480px\] {
+    margin-top: 480px;
   }
 
   .md\:block {
@@ -1926,6 +1995,10 @@ html, body {
     padding-top: 1rem;
   }
 
+  .md\:pt-\[480px\] {
+    padding-top: 480px;
+  }
+
   .md\:text-\[50px\] {
     font-size: 50px;
   }
@@ -1939,6 +2012,14 @@ html, body {
 
   .lg\:ml-0 {
     margin-left: 0px;
+  }
+
+  .lg\:mt-\[0px\] {
+    margin-top: 0px;
+  }
+
+  .lg\:mt-0 {
+    margin-top: 0px;
   }
 
   .lg\:block {

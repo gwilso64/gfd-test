@@ -143,14 +143,15 @@ const OurStorySection = () => {
                 }`}
           />
         </div>
+        
         {/* Uses flexbox to prevent overlap */}
-        <div className="bg-[#F5F5F5] px-5 pt-5 pb-5 mt-4 sm:ml-4 w-[calc(100%-20px)] float-right">
-          <p className="font-['Red_Hat_Text'] text-[14.4px] font-semibold mb-4">
+       <div class="relative bg-[#F5F5F5] px-5 pt-5 pb-20 mt-4 sm:ml-4 w-[calc(100%-20px)] float-right">
+          <p class="font-['Red_Hat_Text'] text-[14.4px] font-semibold  ">
             Over the past 15 years, we have expanded our portfolio of products across a range of composite, aluminium, uPVC and security products. Our goal was always to offer a complete home improvement solution, which we now carry out nationwide through GFD Homes.
           </p>
-          <img 
-            className="ml-auto block -right-[20px] relative"
-            src={currentLocation.images.mobile.side}
+          <img
+            class="absolute bottom-[-220px] right-0"
+            src="/images/mobile/mobile-3-b.png"
             alt="Mobile side image"
           />
         </div>

@@ -35127,6 +35127,7 @@ var CompanyValuesSection = function CompanyValuesSection() {
   // two grid layout with some items that are only viewable on desktop or mobile.
 
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+    className: "mt-[520px] md:mt-0",
     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
       className: "min-h-screen font-['Red_Hat_Text'] bg-[#F5F5F5] md:bg-none lg:bg-[url('/images/companyValues/company-value-background.png')]  bg-no-repeat bg-inherit",
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
@@ -35346,13 +35347,13 @@ var OurStorySection = function OurStorySection() {
           className: "transition-opacity duration-700 relative -left-[22px] h-auto -mt-[115px] ".concat(isTransitioning ? 'opacity-0' : 'opacity-100')
         })
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-        className: "bg-[#F5F5F5] px-5 pt-5 pb-5 mt-4 sm:ml-4 w-[calc(100%-20px)] float-right",
+        "class": "relative bg-[#F5F5F5] px-5 pt-5 pb-20 mt-4 sm:ml-4 w-[calc(100%-20px)] float-right",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
-          className: "font-['Red_Hat_Text'] text-[14.4px] font-semibold mb-4",
+          "class": "font-['Red_Hat_Text'] text-[14.4px] font-semibold  ",
           children: "Over the past 15 years, we have expanded our portfolio of products across a range of composite, aluminium, uPVC and security products. Our goal was always to offer a complete home improvement solution, which we now carry out nationwide through GFD Homes."
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("img", {
-          className: "ml-auto block -right-[20px] relative",
-          src: currentLocation.images.mobile.side,
+          "class": "absolute bottom-[-220px] right-0",
+          src: "/images/mobile/mobile-3-b.png",
           alt: "Mobile side image"
         })]
       })]
