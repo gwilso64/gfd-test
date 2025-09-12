@@ -86,8 +86,8 @@ const OurStorySection = () => {
           {/* Text content and image placement. I will add the thatched house background to this */}
           <div className="text-content main-box relative flex sm:justify-start justify-center lg:pl-12 pr-12 pb-24 pt-10 bg-cover bg-center sm:ml-6 bg-no-repeat">
             <div className="relative text-content">
-              <div className="bg-white ml-4 sm:ml-0 sm:pt-4 pr-8 w-full max-w-4xl z-10 relative flex">
-                <div className="lg:w-4/5 pr-6 bg-white p-8 pt-4 ">
+              <div className="bg-white ml-4 sm:ml-0 sm:pt-4 pr-8 w-full max-w-4xl z-10 relative flex max-[325px]:pr-[0px]  ">
+                <div className="lg:w-4/5 pr-6 bg-white p-8 pt-4 max-[325px]:pr-4 max-[325px]:p-4">
                   <div className={`max-w-[720px] w-full text-lg leading-normal`} >
                     <h2 className="text-[20px] sm:text-[45px] font-bold text-gray-800 mb-4 pb-4 border-b-2 border-gray-800">
                       Our Story
@@ -136,7 +136,7 @@ const OurStorySection = () => {
           <img 
             src={currentLocation.images.mobile.bottom}
             alt="Mobile bottom image"
-            className={`transition-opacity duration-700 relative -left-[22px] h-auto -mt-[115px] max-[400px]:-mt-[67px] ${
+            className={`transition-opacity duration-700 relative -left-[22px] h-auto -mt-[115px] max-[400px]:-mt-[67px]  ${
                   isTransitioning ? 'opacity-0' : 'opacity-100'
                 }`}
           />

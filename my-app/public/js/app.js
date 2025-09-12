@@ -35326,9 +35326,9 @@ var OurStorySection = function OurStorySection() {
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
             className: "relative text-content",
             children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-              className: "bg-white ml-4 sm:ml-0 sm:pt-4 pr-8 w-full max-w-4xl z-10 relative flex",
+              className: "bg-white ml-4 sm:ml-0 sm:pt-4 pr-8 w-full max-w-4xl z-10 relative flex max-[325px]:pr-[0px]  ",
               children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-                className: "lg:w-4/5 pr-6 bg-white p-8 pt-4 ",
+                className: "lg:w-4/5 pr-6 bg-white p-8 pt-4 max-[325px]:pr-4 max-[325px]:p-4",
                 children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
                   className: "max-w-[720px] w-full text-lg leading-normal",
                   children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("h2", {
@@ -35370,7 +35370,7 @@ var OurStorySection = function OurStorySection() {
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("img", {
           src: currentLocation.images.mobile.bottom,
           alt: "Mobile bottom image",
-          className: "transition-opacity duration-700 relative -left-[22px] h-auto -mt-[115px] max-[400px]:-mt-[67px] ".concat(isTransitioning ? 'opacity-0' : 'opacity-100')
+          className: "transition-opacity duration-700 relative -left-[22px] h-auto -mt-[115px] max-[400px]:-mt-[67px]  ".concat(isTransitioning ? 'opacity-0' : 'opacity-100')
         })
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
         "class": "relative bg-[#F5F5F5] px-5 pt-5 pb-20 mt-4 sm:ml-4 w-[calc(100%-20px)] float-right",

@@ -1591,6 +1591,25 @@ html, body {
   }
 }
 
+@media (max-width: 325px) {
+
+  .max-\[325px\]\:p-4 {
+    padding: 1rem;
+  }
+
+  .max-\[325px\]\:pr-\[0px\] {
+    padding-right: 0px;
+  }
+
+  .max-\[325px\]\:pr-4 {
+    padding-right: 1rem;
+  }
+
+  .max-\[325px\]\:pl-4 {
+    padding-left: 1rem;
+  }
+}
+
 @media (min-width: 640px) {
 
   .sm\:relative {
