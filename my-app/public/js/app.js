@@ -35585,7 +35585,7 @@ var OurTeamSection = function OurTeamSection() {
     setSelectedMember(teams[newIndex]);
   };
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
-    className: "pl-4 pb-8 pr-4 mx-auto sm:overflow-x-hidden",
+    className: "pl-4 pb-8 pr-4 mx-auto overflow-x-hidden",
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
       className: "justify-between items-center mb-4 w-full block",
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {

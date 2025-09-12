@@ -109,7 +109,7 @@ const OurTeamSection = () => {
     };
 
     return (
-        <div className="pl-4 pb-8 pr-4 mx-auto sm:overflow-x-hidden">
+        <div className="pl-4 pb-8 pr-4 mx-auto overflow-x-hidden">
             <div className="justify-between items-center mb-4 w-full block">
                 <div>
                     <h2 className=" m-auto text-4xl font-bold text-black mb-2 ">Our Team</h2>
