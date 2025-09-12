@@ -35155,7 +35155,7 @@ var CompanyValuesSection = function CompanyValuesSection() {
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
     className: "mt-[520px] md:mt-0",
     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-      className: "min-h-screen font-['Red_Hat_Text'] bg-[#F5F5F5] md:bg-none lg:bg-[url('/images/companyValues/company-value-background.png')]  bg-no-repeat bg-inherit",
+      className: "min-h-screen font-['Red_Hat_Text'] bg-[#F5F5F5] md:bg-none sm:bg-[center_-100px] bg-[url('/images/companyValues/company-value-background.png')]  bg-no-repeat bg-inherit",
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
         className: "w-full grid grid-cols-1 sm:grid-cols-[1fr_2fr] gap-8 pb-8 lg:pt-20 md:pt-20 sm:pt-0",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {

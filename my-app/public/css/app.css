@@ -1290,6 +1290,9 @@ select {
 .bg-inherit {
   background-color: inherit;
 }
+.bg-\[url\(\'\/images\/companyValues\/company-value-background\.png\'\)\] {
+  background-image: url('/images/companyValues/company-value-background.png');
+}
 .bg-cover {
   background-size: cover;
 }
@@ -1804,6 +1807,10 @@ html, body {
 
   .sm\:bg-transparent {
     background-color: transparent;
+  }
+
+  .sm\:bg-\[center_-100px\] {
+    background-position: center -100px;
   }
 
   .sm\:px-6 {
