@@ -1809,8 +1809,16 @@ html, body {
     background-color: transparent;
   }
 
+  .sm\:bg-\[url\(\'\/images\/companyValues\/company-value-background\.png\'\)\] {
+    background-image: url('/images/companyValues/company-value-background.png');
+  }
+
   .sm\:bg-\[center_-100px\] {
     background-position: center -100px;
+  }
+
+  .sm\:bg-\[center_-150px\] {
+    background-position: center -150px;
   }
 
   .sm\:px-6 {

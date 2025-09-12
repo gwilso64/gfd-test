@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 /*
 * NOT IN USE (alterative to using TeamMemberOverlay. TeamMemberOverlay provids dyamic detailS)
 * Component for TeamMemberOverlay

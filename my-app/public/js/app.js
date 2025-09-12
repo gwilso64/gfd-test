@@ -35151,11 +35151,11 @@ __webpack_require__.r(__webpack_exports__);
 var CompanyValuesSection = function CompanyValuesSection() {
   // images are either located in companyValues or mobile directory.
   // two grid layout with some items that are only viewable on desktop or mobile.
-
+  // large margin added dur to overlapping on mob
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
     className: "mt-[520px] md:mt-0",
     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-      className: "min-h-screen font-['Red_Hat_Text'] bg-[#F5F5F5] md:bg-none sm:bg-[center_-100px] bg-[url('/images/companyValues/company-value-background.png')]  bg-no-repeat bg-inherit",
+      className: "min-h-screen font-['Red_Hat_Text'] bg-[#F5F5F5] md:bg-none lg:bg-[url('/images/companyValues/company-value-background.png')]  bg-no-repeat bg-inherit",
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
         className: "w-full grid grid-cols-1 sm:grid-cols-[1fr_2fr] gap-8 pb-8 lg:pt-20 md:pt-20 sm:pt-0",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
@@ -35326,7 +35326,7 @@ var OurStorySection = function OurStorySection() {
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
             className: "relative text-content",
             children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-              className: "bg-white lg:ml-0 sm:ml-4 sm:pt-4 pr-8 w-full max-w-4xl z-10 relative flex",
+              className: "bg-white ml-4 sm:ml-0 sm:pt-4 pr-8 w-full max-w-4xl z-10 relative flex",
               children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
                 className: "lg:w-4/5 pr-6 bg-white p-8 pt-4 ",
                 children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
