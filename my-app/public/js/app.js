@@ -35332,7 +35332,7 @@ var OurStorySection = function OurStorySection() {
                 children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
                   className: "max-w-[720px] w-full text-lg leading-normal",
                   children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("h2", {
-                    className: "text-[45px] font-bold text-gray-800 mb-4 pb-4 border-b-2 border-gray-800",
+                    className: "text-[20px] sm:text-[45px] font-bold text-gray-800 mb-4 pb-4 border-b-2 border-gray-800",
                     children: "Our Story"
                   }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
                     className: "mb-4",

@@ -89,7 +89,7 @@ const OurStorySection = () => {
               <div className="bg-white ml-4 sm:ml-0 sm:pt-4 pr-8 w-full max-w-4xl z-10 relative flex">
                 <div className="lg:w-4/5 pr-6 bg-white p-8 pt-4 ">
                   <div className={`max-w-[720px] w-full text-lg leading-normal`} >
-                    <h2 className="text-[45px] font-bold text-gray-800 mb-4 pb-4 border-b-2 border-gray-800">
+                    <h2 className="text-[20px] sm:text-[45px] font-bold text-gray-800 mb-4 pb-4 border-b-2 border-gray-800">
                       Our Story
                     </h2>
                     {/* Main text - Second P does not should on mobile */}
